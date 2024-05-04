@@ -20,9 +20,17 @@ import java.util.List;
 @Service
 public class CustomerServiceImpl implements CustomerService {
 
+    @Autowired
+    private CustomerRepo customerRepo;
+
+    @Autowired
+    private ModelMapper mapper;
     @Override
     public CustomerDTO saveCustomer(CustomerDTO customerDTO) {
-        return null;
+        if (customerRepo.existsById(customerDTO.getCode())){
+            throw new DuplicateRecordException("Customer Id is already exists !!");
+        }
+        return mapper.map(customerRepo.save(mapper.map(customerDTO, Customer.class)),CustomerDTO.class);
     }
 
     @Override
