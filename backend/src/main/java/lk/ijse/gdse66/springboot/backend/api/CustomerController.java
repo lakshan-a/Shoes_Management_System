@@ -61,14 +61,14 @@ public class CustomerController {
 
 
 
-// "code":"C001",
-//         "name":"Navishka",
-//         "email":"navishka@gmail.com",
+//         "code":"C001",
+//         "name":"Lakshan",
+//         "email":"lakshan@gmail.com",
 //         "gender":"male",
-//         "contact":"75518991",
+//         "contact":"713988628",
 //         "dob":"",
 //         "addressLine1":"matara",
-//         "addressLine2":"devinuwara",
+//         "addressLine2":"weharagampita",
 //         "loyaltyDate":"",
 //         "loyaltyLevel":"",
 //         "loyaltyPoints":2
