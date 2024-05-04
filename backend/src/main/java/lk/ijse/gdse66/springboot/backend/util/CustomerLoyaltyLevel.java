@@ -6,4 +6,5 @@ package lk.ijse.gdse66.springboot.backend.util;
  * @date: 5/4/2024
  */
 public enum CustomerLoyaltyLevel {
+    GOLD,SILVER,BRONZE,NEW
 }
