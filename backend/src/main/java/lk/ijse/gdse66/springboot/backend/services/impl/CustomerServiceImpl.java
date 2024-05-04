@@ -52,16 +52,37 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public List<CustomerDTO> getAllCustomers() {
-        return null;
+        return customerRepo.findAll().stream().map(customer -> mapper.map(customer, CustomerDTO.class)).toList();
     }
 
     @Override
     public List<CustomerDTO> searchCustomer(String name) {
-        return null;
+
+        return customerRepo.findByNameStartingWith(name).stream().map(customer -> mapper.map(customer, CustomerDTO.class)).toList();
     }
 
     @Override
     public String generateNextId() {
-        return null;
+        String prefix = "C";
+        String id = "";
+
+        Customer lastCustomer = customerRepo.findTopByOrderByCodeDesc();
+        int nextNumericPart;
+        if (lastCustomer != null) {
+            String lastCode = lastCustomer.getCode();
+            String numericPartString = lastCode.substring(prefix.length());
+            try {
+                int numericPart = Integer.parseInt(numericPartString);
+                nextNumericPart = numericPart + 1;
+            } catch (NumberFormatException e) {
+                nextNumericPart = 1;
+            }
+        } else {
+            nextNumericPart = 1;
+        }
+        id = prefix + String.format("%03d", nextNumericPart);
+
+        return id;
+
     }
 }
