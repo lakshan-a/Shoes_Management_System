@@ -5,6 +5,7 @@ import lk.ijse.gdse66.springboot.backend.entity.Customer;
 import lk.ijse.gdse66.springboot.backend.repository.CustomerRepo;
 import lk.ijse.gdse66.springboot.backend.services.CustomerService;
 import lk.ijse.gdse66.springboot.backend.services.exception.DuplicateRecordException;
+import lk.ijse.gdse66.springboot.backend.services.exception.NotFoundException;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -35,11 +36,17 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public CustomerDTO updateCustomer(CustomerDTO customerDTO) {
-        return null;
+        if (!customerRepo.existsById(customerDTO.getCode())){
+            throw new NotFoundException("Can't find customer id !!");
+        }
+        return mapper.map(customerRepo.save(mapper.map(customerDTO, Customer.class)), CustomerDTO.class);
     }
 
     @Override
     public boolean deleteCustomer(String id) {
+        if (!customerRepo.existsById(id)){
+            throw new NotFoundException("Can't find customer id !!");
+        }
         return false;
     }
 
