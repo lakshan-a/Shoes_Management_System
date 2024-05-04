@@ -5,5 +5,5 @@ package lk.ijse.gdse66.springboot.backend.util;
  * @author: lakshanR
  * @date: 5/4/2024
  */
-public enum CustomerLoyaltyLevel {
+public enum Gender {
 }
