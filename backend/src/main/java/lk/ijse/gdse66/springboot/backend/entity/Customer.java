@@ -10,6 +10,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.security.Timestamp;
 import java.util.Date;
 
 /**
@@ -35,6 +36,8 @@ public class Customer {
     private String addressLine1;
     private String addressLine2;
     private Date loyaltyDate;
+    @Enumerated(EnumType.STRING)
     private CustomerLoyaltyLevel loyaltyLevel;
     private Integer loyaltyPoints;
+    private Timestamp recentPurchaseDate;
 }
