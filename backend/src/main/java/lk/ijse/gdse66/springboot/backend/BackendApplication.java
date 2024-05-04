@@ -7,6 +7,12 @@ import org.springframework.context.annotation.Bean;
 
 import java.io.IOException;
 
+/**
+ * @version: v0.0.1
+ * @author: lakshanR
+ * @date: 5/4/2024
+ */
+
 @SpringBootApplication
 public class BackendApplication {
 
