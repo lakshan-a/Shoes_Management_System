@@ -3,6 +3,7 @@ package lk.ijse.gdse66.springboot.backend.api;
 import jakarta.validation.Valid;
 import lk.ijse.gdse66.springboot.backend.dto.SaleDTO;
 import lk.ijse.gdse66.springboot.backend.services.SaleServices;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;

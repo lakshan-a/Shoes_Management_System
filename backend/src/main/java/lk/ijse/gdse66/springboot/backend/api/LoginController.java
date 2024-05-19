@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @version: v0.0.1
- * @author: lakshanR
+ * @author: lakshan
  * @date: 5/19/2024
  */
 @RestController

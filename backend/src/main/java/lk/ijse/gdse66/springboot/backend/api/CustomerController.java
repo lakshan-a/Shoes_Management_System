@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * @version: v0.0.1
  * @author: lakshanR
- * @date: 5/4/2024
+ * @date: 5/6/2024
  */
 
 @RestController
@@ -45,12 +45,12 @@ public class CustomerController {
 
     @GetMapping("/nextId")
     public String nextId(){
-        return customerService.generateNextId();
+      return customerService.generateNextId();
     }
 
     @GetMapping("/search")
     public List<CustomerDTO> search(@RequestParam("name") String name){
-        return customerService.searchCustomer(name);
+       return customerService.searchCustomer(name);
     }
 
     @DeleteMapping("/delete/{id}")
@@ -59,3 +59,16 @@ public class CustomerController {
     }
 }
 
+
+
+// "code":"C001",
+//         "name":"Navishka",
+//         "email":"navishka@gmail.com",
+//         "gender":"male",
+//         "contact":"75518991",
+//         "dob":"",
+//         "addressLine1":"matara",
+//         "addressLine2":"devinuwara",
+//         "loyaltyDate":"",
+//         "loyaltyLevel":"",
+//         "loyaltyPoints":2

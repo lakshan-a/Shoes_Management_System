@@ -6,8 +6,8 @@ import lk.ijse.gdse66.springboot.backend.auth.Response.JWTAuthResponse;
 
 /**
  * @version: v0.0.1
- * @author: lakshanR
- * @date: 5/19/2024
+ * @author: Navishka
+ * @date: 5/14/2024
  */
 public interface AuthenticationService {
 

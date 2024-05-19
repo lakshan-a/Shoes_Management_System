@@ -1,7 +1,10 @@
 package lk.ijse.gdse66.springboot.backend.services.impl;
 
+import lk.ijse.gdse66.springboot.backend.dto.CustomerDTO;
 import lk.ijse.gdse66.springboot.backend.dto.SupplierDTO;
+import lk.ijse.gdse66.springboot.backend.entity.Customer;
 import lk.ijse.gdse66.springboot.backend.entity.Supplier;
+import lk.ijse.gdse66.springboot.backend.repository.CustomerRepo;
 import lk.ijse.gdse66.springboot.backend.repository.SupplierRepo;
 import lk.ijse.gdse66.springboot.backend.services.SupplierService;
 import lk.ijse.gdse66.springboot.backend.services.exception.DuplicateRecordException;
@@ -16,7 +19,7 @@ import java.util.List;
 /**
  * @version: v0.0.1
  * @author: lakshanR
- * @date: 5/19/2024
+ * @date: 5/5/2024
  */
 
 @Service

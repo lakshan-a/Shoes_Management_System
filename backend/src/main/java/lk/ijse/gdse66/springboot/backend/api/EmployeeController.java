@@ -65,7 +65,7 @@ public class EmployeeController {
 
 // ({
 //         "employeeCode": "EMP001",
-//         "employeeName": "lakshan",
+//         "employeeName": "John Doe",
 //         "employeeProfilePic": "",
 //         "gender": "MALE",
 //         "status": "Active",
@@ -80,7 +80,7 @@ public class EmployeeController {
 //         "addressLine04": "Sri Lanka",
 //         "addressLine05": "12345",
 //         "contactNo": "+94123456789",
-//         "email": "lakshan@example.com",
-//         "emergencyContactPerson": "lakshan"
+//         "email": "john.doe@example.com",
+//         "emergencyContactPerson": "Jane Doe"
 //         }
 //         )

@@ -1,6 +1,8 @@
 package lk.ijse.gdse66.springboot.backend.api;
 
+import lk.ijse.gdse66.springboot.backend.dto.CustomerDTO;
 import lk.ijse.gdse66.springboot.backend.dto.SupplierDTO;
+import lk.ijse.gdse66.springboot.backend.services.CustomerService;
 import lk.ijse.gdse66.springboot.backend.services.SupplierService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -10,18 +12,18 @@ import java.util.List;
 /**
  * @version: v0.0.1
  * @author: lakshanR
- * @date: 5/19/2024
+ * @date: 5/4/2024
  */
 
 @RestController
 @RequestMapping("/supplier")
 @CrossOrigin(origins = "*")
-public class SupplierController {
+public class SuplierController {
 
     @Autowired
     private SupplierService supplierService;
 
-    public SupplierController() {
+    public SuplierController() {
         System.out.println("customer working !");
     }
 
@@ -57,4 +59,22 @@ public class SupplierController {
         supplierService.deleteSupplier(id);
     }
 
+
+
 }
+
+
+
+//{
+//        "code": "S001",
+//        "name": "Navishka",
+//        "category": null,
+//        "addressLine1": "matara",
+//        "addressLine2": "devinuwara",
+//        "addressLine3": "devinuwara",
+//        "addressLine4": "devinuwara",
+//        "addressLine5": "devinuwara",
+//        "contact_1": "755738991",
+//        "contact_2": "755734991",
+//        "email": "navishka@gmail.com"
+//        }

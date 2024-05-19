@@ -14,12 +14,12 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
+
 /**
  * @version: v0.0.1
  * @author: lakshanR
- * @date: 5/4/2024
+ * @date: 5/6/2024
  */
-
 @Service
 @Transactional
 public class CustomerServiceImpl implements CustomerService {
@@ -35,7 +35,7 @@ public class CustomerServiceImpl implements CustomerService {
         if (customerRepo.existsById(customerDTO.getCode())){
             throw new DuplicateRecordException("Customer Id is already exists !!");
         }
-        return mapper.map(customerRepo.save(mapper.map(customerDTO, Customer.class)),CustomerDTO.class);
+      return mapper.map(customerRepo.save(mapper.map(customerDTO, Customer.class)),CustomerDTO.class);
     }
 
     @Override
@@ -62,7 +62,7 @@ public class CustomerServiceImpl implements CustomerService {
     @Override
     public List<CustomerDTO> searchCustomer(String name) {
 
-        return customerRepo.findByNameStartingWith(name).stream().map(customer -> mapper.map(customer, CustomerDTO.class)).toList();
+       return customerRepo.findByNameStartingWith(name).stream().map(customer -> mapper.map(customer, CustomerDTO.class)).toList();
     }
 
     @Override

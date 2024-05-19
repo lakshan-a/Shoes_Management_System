@@ -7,8 +7,8 @@ import java.util.Optional;
 
 /**
  * @version: v0.0.1
- * @author: lakshan
- * @date: 5/19/2024
+ * @author: lakshanR
+ * @date: 5/12/2024
  */
 public interface UserRepo extends JpaRepository<User,String> {
 
