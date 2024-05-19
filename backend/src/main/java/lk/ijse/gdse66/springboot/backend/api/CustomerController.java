@@ -59,16 +59,3 @@ public class CustomerController {
     }
 }
 
-
-
-// "code":"C001",
-//         "name":"Navishka",
-//         "email":"navishka@gmail.com",
-//         "gender":"male",
-//         "contact":"75518991",
-//         "dob":"",
-//         "addressLine1":"matara",
-//         "addressLine2":"devinuwara",
-//         "loyaltyDate":"",
-//         "loyaltyLevel":"",
-//         "loyaltyPoints":2
