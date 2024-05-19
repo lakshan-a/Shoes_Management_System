@@ -15,17 +15,18 @@ import java.util.Date;
 
 /**
  * @version: v0.0.1
- * @author: lakshanR
- * @date: 5/4/2024
+ * @author: LakshanR
+ * @date: 3/25/2024
  */
+
 
 @Data
 @Entity
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 public class Customer {
-
     @Id
+//@GeneratedValue(strategy = GenerationType.AUTO)
     private String code;
     private String name;
     private String email;
@@ -40,4 +41,5 @@ public class Customer {
     private CustomerLoyaltyLevel loyaltyLevel;
     private Integer loyaltyPoints;
     private Timestamp recentPurchaseDate;
+
 }

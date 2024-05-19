@@ -1,13 +1,14 @@
 package lk.ijse.gdse66.springboot.backend.dto;
 
-import lk.ijse.gdse66.springboot.backend.services.exception.ServiceException;
 import lk.ijse.gdse66.springboot.backend.util.CustomerLoyaltyLevel;
 import lk.ijse.gdse66.springboot.backend.util.Gender;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
+import java.security.Timestamp;
 import java.util.Date;
 
 /**
@@ -17,8 +18,8 @@ import java.util.Date;
  */
 
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 public class CustomerDTO implements Serializable {
 
     private String code;
@@ -32,4 +33,7 @@ public class CustomerDTO implements Serializable {
     private Date loyaltyDate;
     private CustomerLoyaltyLevel loyaltyLevel;
     private Integer loyaltyPoints;
+//    private Timestamp recentPurchaseDate;
+
+
 }
