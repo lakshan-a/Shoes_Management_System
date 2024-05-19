@@ -1,5 +1,6 @@
 package lk.ijse.gdse66.springboot.backend.services.impl;
 
+
 import lk.ijse.gdse66.springboot.backend.dto.CustomerDTO;
 import lk.ijse.gdse66.springboot.backend.entity.Customer;
 import lk.ijse.gdse66.springboot.backend.repository.CustomerRepo;
@@ -9,6 +10,7 @@ import lk.ijse.gdse66.springboot.backend.services.exception.NotFoundException;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -19,6 +21,7 @@ import java.util.List;
  */
 
 @Service
+@Transactional
 public class CustomerServiceImpl implements CustomerService {
 
     @Autowired
@@ -26,6 +29,7 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Autowired
     private ModelMapper mapper;
+
     @Override
     public CustomerDTO saveCustomer(CustomerDTO customerDTO) {
         if (customerRepo.existsById(customerDTO.getCode())){
