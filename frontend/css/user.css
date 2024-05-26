@@ -1,0 +1,203 @@
+/* Main Container */
+.userformmaincontainer {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f9fa; /* Light grey background */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Form Title */
+.userformtitle h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333; /* Dark grey */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Form Container */
+.userdetailsmaincontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 800px; /* Max width for the form */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Form Fields */
+.userdetailsfirstcontainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.firstcontainerfirstpart,
+.firstcontainersecondpart,
+.firstcontainerthirdpart {
+    flex: 1 1 calc(33% - 20px);
+    min-width: 200px;
+}
+
+/* Buttons */
+.userdetailsforthcontainer {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.userdetailsforthcontainer button {
+    flex: 1;
+    min-width: 120px;
+    margin: 5px;
+}
+
+/* Table */
+.userdetailsfifthcontainer {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.userdetailsfifthcontainer .col-11 {
+    width: 100%;
+    overflow-x: auto;
+}
+
+/* Table Wrapper */
+.table-responsive {
+    width: 100%;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(64, 64, 64, 0.1); /* Light shadow */
+    background-color: #fff; /* White background */
+}
+
+/* Modern Table Styles */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff; /* White background */
+}
+
+.table thead {
+    background-color: #4CAF50; /* Green background for header */
+    color: #fff; /* White text */
+}
+
+.table thead th {
+    padding: 15px 20px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.table tbody tr {
+    border-bottom: 1px solid #ddd; /* Light grey border between rows */
+    transition: background-color 0.3s ease;
+}
+
+.table tbody tr:hover {
+    background-color: #f1f1f1; /* Light grey background on hover */
+}
+
+.table tbody td {
+    padding: 15px 20px;
+    font-size: 14px;
+    color: #333; /* Dark grey text */
+}
+
+.table tbody tr:last-child {
+    border-bottom: none; /* Remove border from the last row */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .table-responsive {
+        border: none; /* Remove border on small screens */
+    }
+
+    .table thead {
+        display: none; /* Hide table header on small screens */
+    }
+
+    .table, .table tbody, .table tr, .table td {
+        display: block;
+        width: 100%;
+    }
+
+    .table tr {
+        margin-bottom: 15px;
+    }
+
+    .table td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    .table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        font-weight: 600;
+        text-align: left;
+    }
+}
+
+
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .firstcontainerfirstpart,
+    .firstcontainersecondpart,
+    .firstcontainerthirdpart {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .firstcontainerfirstpart,
+    .firstcontainersecondpart,
+    .firstcontainerthirdpart {
+        flex: 1 1 100%;
+    }
+
+    .userformmaincontainer {
+        padding: 10px;
+    }
+
+    .userformtitle {
+        margin-bottom: 10px;
+    }
+
+    .userdetailsforthcontainer {
+        flex-direction: column;
+    }
+
+    .userdetailsforthcontainer button {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .userdetailsforthcontainer button {
+        width: 100%;
+    }
+}

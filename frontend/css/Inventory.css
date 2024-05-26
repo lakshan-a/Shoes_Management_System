@@ -1,0 +1,264 @@
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 2px 15px rgba(64, 64, 64, 0.1); /* Light shadow */
+    background-color: #fff; /* White background */
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.table thead {
+    background-color: #4CAF50; /* Green background for header */
+    color: #fff; /* White text */
+    text-align: left;
+}
+#search{
+    padding: 1vh;
+}
+input[type="file"] {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#file-1-preview {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-top: 10px;
+}
+
+#file-1-preview div {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#file-1-preview img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto; /* Center align the image */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    #file-1-preview img {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    #file-1-preview div {
+        font-size: 14px;
+    }
+}
+
+
+
+/* Styling for the button container */
+.d-grid {
+    display: grid;
+    gap: 16px;
+    padding: 5px;
+}
+
+/* Base styles for all buttons */
+/*.btn {
+    display: block;
+    padding: 12px;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    !*border-radius: 4px;*!
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+!* Color-specific button styles *!
+.btn-outline-primary {
+    background-color: #007bff;
+}
+.btn-outline-warning {
+    background-color: #ffc107;
+    color: #212529; !* Ensuring better readability on light colors *!
+}
+.btn-outline-danger {
+    background-color: #dc3545;
+}
+.btn-outline-success {
+    background-color: #28a745;
+}*/
+
+/* Hover effects */
+.btn:hover {
+    opacity: 0.85;
+}
+
+/* Responsive adjustments */
+@media (min-width: 576px) {
+    .d-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 768px) {
+    .d-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+}
+
+
+
+/* Modern CSS styles for the form */
+
+/* Container */
+.row.col-12 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Form container */
+.form {
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #f8f9fa;
+}
+
+/* Form element */
+.form-element {
+    position: relative;
+}
+
+/* File input styling */
+.form-element input[type="file"] {
+    display: none;
+}
+
+.form-element label {
+    display: block;
+    cursor: pointer;
+    text-align: center;
+    border: 2px dashed #ced4da;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.form-element label img {
+    max-width: 100%;
+    max-height: 100%;
+    margin-bottom: 10px;
+}
+
+.form-element label div {
+    font-size: 24px;
+    color: #6c757d;
+}
+
+/* Input and select styles */
+.form-control,
+.form-select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+/* Button styles */
+.btn {
+    /*border-radius: 5px;*/
+    cursor: pointer;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .row.col-md-8 {
+        flex-direction: column;
+    }
+}
+
+.bi-arrow-up::before {
+    content: "\f148";
+    display: flex;
+    justify-content: center;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+.table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+.table th, .table td {
+    white-space: nowrap;
+    text-align: left;
+    padding: 8px;
+    border: 1px solid #ddd;
+}
+
+/* Optional: Adds zebra striping */
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0,0,0,.05);
+}
+
+@media (max-width: 768px) {
+    .table th, .table td {
+        padding: 10px 5px;
+    }
+}
+
+.inventoryformpopupmaincontainer{
+    position: absolute;
+    height: 100%;
+    background-color: rgba(59, 59, 59, 0.474);
+}
+
+.inventoryformpopupmaincontainer>div:nth-child(1){
+    position: relative;
+    height: 50%;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.inventorypopupformheader{
+    position: relative;
+    height: 40px;
+}
+
+.inventorypopupformclosebtn{
+    background-color: transparent;
+    border: 0px;
+}
+
+.inventorypopupformbody{
+    position: relative;
+    height: 400px;
+    width: 90%;
+}
+
+.inventorypopupformbody>div{
+    width: calc(95%/2);
+}
+
+.inventorypopupbtn{
+    width: 70px;
+    font-family: "Dongle", cursive;
+    font-size: 25px !important;
+    line-height: 20px;
+}
+

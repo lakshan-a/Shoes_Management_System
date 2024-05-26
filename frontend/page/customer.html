@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Customer</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+
+  <!-- Favicon -->
+  <!--<link href="img/favicon.ico" rel="icon">-->
+
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Icon Font Stylesheet -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Libraries Stylesheet -->
+  <link href="../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="../lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+  <!-- Customized Bootstrap Stylesheet -->
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Template Stylesheet -->
+<!--  <link href="../css/style.css" rel="stylesheet">-->
+<!--  <link href="../css/Customer.css" rel="stylesheet">-->
+<!--  <link rel="stylesheet" href="../font/Heebo/stylesheet.css">-->
+
+
+
+  <link href="../asset/css/pace.min.css" rel="stylesheet"/>
+  <script src="../asset/js/pace.min.js"></script>
+  <!--favicon-->
+  <link rel="icon" href="../asset/images/favicon.ico" type="image/x-icon">
+  <!-- simplebar CSS-->
+  <link href="../asset/plugins/simplebar/css/simplebar.css" rel="stylesheet"/>
+  <!-- Bootstrap core CSS-->
+  <link href="../asset/css/bootstrap.min.css" rel="stylesheet"/>
+  <!-- animate CSS-->
+  <link href="../asset/css/animate.css" rel="stylesheet" type="text/css"/>
+  <!-- Icons CSS-->
+  <link href="../asset/css/icons.css" rel="stylesheet" type="text/css"/>
+  <!-- Sidebar CSS-->
+  <link href="../asset/css/sidebar-menu.css" rel="stylesheet"/>
+  <!-- Custom Style-->
+  <link href="../asset/css/app-style.css" rel="stylesheet"/>
+
+
+
+</head>
+<body class="bg-theme bg-theme1">
+
+<!-- Start wrapper-->
+<div id="wrapper">
+
+  <!--Start sidebar-wrapper-->
+  <div id="sidebar-wrapper" data-simplebar="" data-simplebar-auto-hide="true">
+    <div class="brand-logo">
+      <a href="../index.html">
+        <img src="../asset/images/logo-icon.png" class="logo-icon" alt="logo icon">
+        <h5 class="logo-text">Dashtreme Admin</h5>
+      </a>
+    </div>
+    <ul class="sidebar-menu do-nicescrol">
+      <li class="sidebar-header">MAIN NAVIGATION</li>
+      <li>
+        <a href="dashboard.html">
+          <i class="zmdi zmdi-view-dashboard"></i> <span>Dashboard</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="customer.html">
+          <i class="fas fa-users"></i> <span>Customer</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="employee.html">
+          <i class="fa-solid fa-user-tie"></i> <span>Employee</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="sale.html">
+          <i class="fa-solid fa-cash-register"></i> <span>Sale</span>
+        </a>
+      </li>
+      <li>
+        <a href="inventory.html">
+          <i class="fas fa-box"></i> <span>Inventory</span>
+        </a>
+      </li>
+      <li>
+        <a href="suppliers.html">
+          <i class="fa-solid fa-truck-fast"></i> <span>Suppliers</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="user.html">
+          <i class="fa-solid fa-user-plus"></i> <span>User</span>
+        </a>
+      </li>
+
+
+    </ul>
+
+  </div>
+  <!--End sidebar-wrapper-->
+
+
+  <!--Start topbar header-->
+  <header class="topbar-nav">
+    <nav class="navbar navbar-expand fixed-top">
+      <ul class="navbar-nav mr-auto align-items-center">
+        <li class="nav-item">
+          <a class="nav-link toggle-menu" href="#">
+            <i class="icon-menu menu-icon"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <form class="search-bar">
+            <input type="text" class="form-control" placeholder="Enter keywords">
+            <a href="#"><i class="icon-magnifier"></i></a>
+          </form>
+        </li>
+      </ul>
+
+      <ul class="navbar-nav align-items-center right-nav-link">
+
+        <li class="nav-item dropdown-lg">
+          <a class="nav-link dropdown-toggle dropdown-toggle-nocaret waves-effect" data-toggle="dropdown" href="#">
+            <i class="fa fa-bell-o"></i></a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link dropdown-toggle dropdown-toggle-nocaret" data-toggle="dropdown" href="#">
+            <span class="user-profile"><img src="https://via.placeholder.com/110x110" class="img-circle" alt="user avatar"></span>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-right">
+
+            <li class="dropdown-item"><i class="icon-power mr-2"></i> Logout</li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <!--End topbar header-->
+  <div class="clearfix"></div>
+
+  <!--Start the Customer-->
+  <div class="content-wrapper">
+    <div class="container-fluid">
+
+      <div class="row mt-3">
+        <div class="col-lg-12">
+          <div class="card">
+            <div class="card-body">
+              <div class="card-title">Customer Details</div>
+              <hr>
+              <div class="row">
+                <div class="col-md-4">
+                  <label for="validationDefault01" class="form-label">Customer Code :</label>
+                  <input type="text" class="form-control customercode" id="validationDefault01" placeholder="Enter Customer Code" required>
+                </div>
+                <div class="col-md-4">
+                  <label for="validationDefault02" class="form-label">Customer Name :</label>
+                  <input type="text" class="form-control customername" id="validationDefault02" placeholder="Enter Customer Name" required>
+                </div>
+                <div class="col-md-4" >
+                  <label for="inputGender" class="form-label"><b>Gender</b></label>
+                  <select id="inputGender" class="form-select customergender">
+                    <option disabled selected>Gender</option>
+                    <option value="1">MALE</option>
+                    <option value="2">FEMALE</option>
+                    <option value="3">OTHER</option>
+                  </select>
+                </div>
+
+                <div class="col-md-4 mt-3">
+                  <label for="validationDefault02" class="form-label">Join date :</label>
+                  <input type="date" class="form-control joindate" id="validationDefault03">
+                </div>
+                <div class="col-md-4 mt-3" >
+                  <label for="customerlevel" class="form-label"><b>Level</b></label>
+                  <select id="customerlevel" class="form-select customerlevel">
+                    <option disabled selected>Level</option>
+                    <option value="1"> GOLD</option>
+                    <option value="2">SILVER</option>
+                    <option value="3">BRONZE</option>
+                    <option value="4">NEW</option>
+                  </select>
+                </div>
+                <div class="col-md-4 mt-3">
+                  <label for="customertotalpoints" class="form-label">Total Point :</label>
+                  <input type="text" id="customertotalpoints" class="form-control customertotalpoints">
+                </div>
+
+                <div class="col-md-4 mt-3">
+                  <label for="customerdob" class="form-label">DOB :</label>
+                  <input type="date" class="form-control customerdob" id="customerdob">
+                </div>
+                <div class="col-md-4 mt-3">
+                  <label for="customerrecentpurchasedatetime" class="form-label">DOB :</label>
+                  <input type="datetime-local" class="form-control customerrecentpurchasedatetime" id="customerrecentpurchasedatetime">
+                </div>
+                <div class="col-md-4 mt-3">
+                  <label for="customercontactno" class="form-label">Contact No :</label>
+                  <input type="text" class="form-control customercontactno" id="customercontactno" placeholder="Enter Contact No" required>
+                </div>
+
+                <div class="col-md-4 mt-3">
+                  <label for="customeremail" class="form-label">Email :</label>
+                  <input type="text" class="form-control customeremail" id="customeremail" placeholder="Enter Email" required>
+                </div>
+
+              </div>
+
+              <div class="row">
+
+                <div class="col-md-4 mt-5">
+                  <label for="customeraddressline01" class="form-label">Address Line 01 :</label>
+                  <input type="text" class="form-control customeraddressline01" id="customeraddressline01" placeholder="Address Line 01" required>
+                </div>
+                <div class="col-md-4 mt-5">
+                  <label for="customeraddressline02" class="form-label">Address Line 02 :</label>
+                  <input type="text" class="form-control customeraddressline02" id="customeraddressline02" placeholder="Address Line 02" required>
+                </div>
+                <div class="col-md-4 mt-5">
+                  <label for="customeraddressline03" class="form-label">Address Line 03 :</label>
+                  <input type="text" class="form-control customeraddressline03" id="customeraddressline03" placeholder="Address Line 03" required>
+                </div>
+                <div class="col-md-4 mt-3">
+                  <label for="customeraddressline04" class="form-label">Address Line 04 :</label>
+                  <input type="text" class="form-control customeraddressline04" id="customeraddressline04" placeholder="Address Line 04" required>
+                </div>
+                <div class="col-md-4 mt-3">
+                  <label for="customeraddressline05" class="form-label">Address Line 05 :</label>
+                  <input type="text" class="form-control customeraddressline05" id="customeraddressline05" placeholder="Address Line 05" required>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class=" my-5 col-md-12">
+                    <button type="submit" class="btn btn-light   customerdatasave"><i class="fa-solid fa-check"></i> Save</button>
+                    <button type="button" class="btn btn-light   customerdataupdate"><i class="fa fa-refresh"></i> Update</button>
+                    <button type="button" class="btn btn-light   customerdatadelete"><i class="fa-solid fa-trash"></i> Delete</button>
+                    <button type="button" class="btn btn-light   customeralldataget"><i class="fa-solid fa-list"></i></i> Get All</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!--End Row-->
+
+      <div class="row mt-3">
+        <div class="col-lg-12">
+          <div class="card">
+            <div class="card-body">
+              <!--              <div class="card-title">Customer </div>-->
+              <!--              <hr>-->
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">Customer Table</h5>
+                      <div class="table-responsive">
+                        <table class="table customertable" id="customertable">
+                          <thead>
+                          <tr>
+                            <th>Code</th>
+                            <th>Name</th>
+                            <th>Gender</th>
+                            <th>Join date</th>
+                            <th>Level</th>
+                            <th>Total points</th>
+                            <th>DOB</th>
+                            <th>Address</th>
+                            <th>Contact No</th>
+                            <th>Email</th>
+                            <th>Purchase date & time</th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!--start overlay-->
+      <div class="overlay toggle-menu"></div>
+      <!--end overlay-->
+    </div>
+    <!-- End Of Customer-->
+
+  </div><!--End content-wrapper-->
+
+  <!--Start Back To Top Button-->
+  <a href="#" class="back-to-top"><i class="fa fa-angle-double-up"></i> </a>
+  <!--End Back To Top Button-->
+
+  <!--Start footer-->
+  <footer class="footer">
+    <div class="container">
+      <div class="text-center">
+        Copyright © 2024 Lakshan Rashmika
+      </div>
+    </div>
+  </footer>
+  <!--End footer-->
+
+
+</div><!--End wrapper-->
+
+
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../lib/chart/chart.min.js"></script>
+<script src="../lib/easing/easing.min.js"></script>
+<script src="../lib/waypoints/waypoints.min.js"></script>
+<script src="../lib/owlcarousel/owl.carousel.min.js"></script>
+<script src="../lib/tempusdominus/js/moment.min.js"></script>
+<script src="../lib/tempusdominus/js/moment-timezone.min.js"></script>
+<script src="../lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+<!-- Template Javascript -->
+<!--<script src="../js/main.js"></script>-->
+<script src="../ajax/customer/Customer.js"></script>
+<script src="../assets/script/customerform/CustomerForm.js"></script>
+<script src="../assets/script/jquery-3.7.1.min.js"></script>
+<script src="../ajax/GlobalAttr.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+
+
+<script src="../asset/js/jquery.min.js"></script>
+<script src="../asset/js/popper.min.js"></script>
+<script src="../asset/js/bootstrap.min.js"></script>
+
+<!-- simplebar js -->
+<script src="../asset/plugins/simplebar/js/simplebar.js"></script>
+<!-- sidebar-menu js -->
+<script src="../asset/js/sidebar-menu.js"></script>
+
+<!-- Custom scripts -->
+<script src="../asset/js/app-script.js"></script>
+
+</body>
+</html>

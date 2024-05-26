@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    /* Base styles */
+    .inventoryformpopupmaincontainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        background: rgba(0, 0, 0, 0.5); /* Optional: to give a semi-transparent background */
+    }
+
+    .inventorypopupformheader {
+        width: 100%;
+        padding: 10px;
+        background: #f1f1f1;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .inventorypopupformclosebtn {
+        background: none;
+        border: none;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .inventorypopupformbody {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 20px;
+        background: #fff;
+        border-radius: 8px;
+    }
+
+    .firstcontainerfirstpart,
+    .firstcontainersecondpart,
+    .firstcontainerthirdpart,
+    .firstcontainerforthdpart {
+        flex: 1 1 100%; /* Full width by default */
+        margin: 10px 0;
+    }
+
+    .labelfont {
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .inputfont {
+        width: 100%;
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .selectedfont {
+        font-size: 14px;
+    }
+
+    .inventorypopupformbuttoncontainer {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .inventorypopupbtn {
+        padding: 10px 20px;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+    @media (min-width: 768px) {
+        .inventoryformpopupmaincontainer {
+            padding: 40px;
+        }
+
+        .inventorypopupformbody {
+            padding: 30px;
+        }
+
+        .firstcontainerfirstpart,
+        .firstcontainersecondpart,
+        .firstcontainerthirdpart,
+        .firstcontainerforthdpart {
+            flex: 1 1 calc(50% - 20px); /* Half width with some margin */
+            margin: 10px;
+        }
+    }
+
+    @media (min-width: 992px) {
+        .firstcontainerfirstpart,
+        .firstcontainersecondpart,
+        .firstcontainerthirdpart,
+        .firstcontainerforthdpart {
+            flex: 1 1 calc(25% - 20px); /* Quarter width with some margin */
+            margin: 10px;
+        }
+    }
+
+</style>
+<body>
+<div class="col-12 d-flex flex-wrap justify-content-center align-items-center inventoryformpopupmaincontainer" >
+    <div class="col-5 d-flex flex-wrap justify-content-center">
+        <div class="col-12 inventorypopupformheader d-flex align-items-center justify-content-end">
+            <button class="inventorypopupformclosebtn">
+                <i class="fa fa-times-circle" aria-hidden="true"></i>
+            </button>
+        </div>
+        <div class="d-flex flex-wrap justify-content-between inventorypopupformbody">
+            <div class="firstcontainerfirstpart">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label labelfont">Occasion</label>
+                    <select class="form-select inputfont occasion" aria-label="Default select example">
+                        <option class="selectedfont" selected>Select Occasion</option>
+                        <option class="selectedfont" value="1">FORMAL</option>
+                        <option class="selectedfont" value="2">CASUAL</option>
+                        <option class="selectedfont" value="3">INDUSTRIAL</option>
+                        <option class="selectedfont" value="4">SPORT</option>
+                    </select>
+                </div>
+            </div>
+            <div class="firstcontainersecondpart">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label labelfont">Verities</label>
+                    <select class="form-select inputfont shoeverities" aria-label="Default select example">
+                        <option class="selectedfont" selected>Select Verities</option>
+                        <option class="selectedfont" value="1">HEEL</option>
+                        <option class="selectedfont" value="2">FLATS</option>
+                        <option class="selectedfont" value="3">WEDGES</option>
+                        <option class="selectedfont" value="4">FLIP FLOPS</option>
+                        <option class="selectedfont" value="5">SANDALS</option>
+                        <option class="selectedfont" value="6">SHOES</option>
+                        <option class="selectedfont" value="7">SLIPPERS</option>
+                    </select>
+                </div>
+            </div>
+            <div class="firstcontainerthirdpart">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label labelfont">Category</label>
+                    <select class="form-select inputfont inventorycategory" aria-label="Default select example">
+                        <option class="selectedfont" selected>Select Category</option>
+                        <option class="selectedfont" value="1">MALE</option>
+                        <option class="selectedfont" value="2">FEMALE</option>
+                    </select>
+                </div>
+            </div>
+            <div class="firstcontainerforthdpart">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label labelfont">Verities</label>
+                    <select class="form-select inputfont otherverities" aria-label="Default select example">
+                        <option class="selectedfont" selected>Select Verities</option>
+                        <option class="selectedfont" value="1">SHOE SHAMPOO</option>
+                        <option class="selectedfont" value="2">POLISH BLACK</option>
+                        <option class="selectedfont" value="3">POLISH BROWN</option>
+                        <option class="selectedfont" value="4">POLISH DARK BROWN</option>
+                        <option class="selectedfont" value="5">FULL-SOCKS</option>
+                        <option class="selectedfont" value="6">HALF-SOCKS</option>
+                    </select>
+                </div>
+                <div class="mb-3 inventorypopupformbuttoncontainer">
+                    <div class="col-12 d-flex flex-wrap justify-content-end">
+                        <button type="button" class="btn btn-outline-primary inventorypopupbtn">ok</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
