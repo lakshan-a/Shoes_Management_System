@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 /**
  * @version: v0.0.1
  * @author: lakshanR
- * @date: 5/17/2024
+ * @date: 5/22/2024
  */
 
 public interface InventoryRepository extends JpaRepository<Inventory,String> {

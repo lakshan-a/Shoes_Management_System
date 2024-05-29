@@ -5,6 +5,7 @@ package lk.ijse.finalcoursework.shoeshop.util;
  * @author: lakshanR
  * @date: 5/18/2024
  */
+
 public enum Gender {
     MALE,
     FEMALE,

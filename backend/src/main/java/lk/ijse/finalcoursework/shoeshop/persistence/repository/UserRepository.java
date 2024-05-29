@@ -9,7 +9,7 @@ import java.util.Optional;
 /**
  * @version: v0.0.1
  * @author: lakshanR
- * @date: 5/17/2024
+ * @date: 5/20/2024
  */
 
 public interface UserRepository extends JpaRepository<User,String> {
