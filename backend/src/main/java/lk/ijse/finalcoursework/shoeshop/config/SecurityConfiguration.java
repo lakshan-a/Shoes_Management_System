@@ -4,7 +4,6 @@ import lk.ijse.finalcoursework.shoeshop.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Profile;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
@@ -19,9 +18,10 @@ import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 /**
- * @author: Manith Lakvidu,
- * @Runtime version: 11.0.11+9-b1341.60 amd64
- **/
+ * @version: v0.0.1
+ * @author: lakshanR
+ * @date: 5/19/2024
+ */
 
 @Configuration
 @EnableWebSecurity

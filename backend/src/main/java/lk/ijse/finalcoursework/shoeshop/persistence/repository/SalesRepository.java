@@ -5,14 +5,14 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
-import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
 /**
- * @author: Manith Lakvidu,
- * @Runtime version: 11.0.11+9-b1341.60 amd64
- **/
+ * @version: v0.0.1
+ * @author: lakshanR
+ * @date: 5/17/2024
+ */
 
 public interface SalesRepository extends JpaRepository<Sales,String> {
     Boolean existsByOrderNo(String id);

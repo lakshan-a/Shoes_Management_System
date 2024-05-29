@@ -1,12 +1,9 @@
 package lk.ijse.finalcoursework.shoeshop.service.impl;
 
-import lk.ijse.finalcoursework.shoeshop.dto.EmployeeDTO;
 import lk.ijse.finalcoursework.shoeshop.dto.InventoryDTO;
 import lk.ijse.finalcoursework.shoeshop.dto.SalesInventoryDTO;
-import lk.ijse.finalcoursework.shoeshop.persistence.entity.Employee;
 import lk.ijse.finalcoursework.shoeshop.persistence.entity.Inventory;
 import lk.ijse.finalcoursework.shoeshop.persistence.entity.Sales;
-import lk.ijse.finalcoursework.shoeshop.persistence.entity.SalesDetails;
 import lk.ijse.finalcoursework.shoeshop.persistence.repository.InventoryRepository;
 import lk.ijse.finalcoursework.shoeshop.persistence.repository.SalesDetailsRepository;
 import lk.ijse.finalcoursework.shoeshop.persistence.repository.SalesRepository;
@@ -18,12 +15,15 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDate;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
 
 /**
- * @author: Manith Lakvidu,
- * @Runtime version: 11.0.11+9-b1341.60 amd64
- **/
+ * @version: v0.0.1
+ * @author: lakshanR
+ * @date: 5/20/2024
+ */
 
 @Service
 @Transactional

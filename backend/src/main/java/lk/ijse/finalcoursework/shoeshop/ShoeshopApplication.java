@@ -6,9 +6,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 /**
- * @author: Manith Lakvidu,
- * @Runtime version: 11.0.11+9-b1341.60 amd64
- **/
+ * @version: v0.0.1
+ * @author: lakshanR
+ * @date: 5/16/2024
+ */
 
 @SpringBootApplication
 public class ShoeshopApplication {
