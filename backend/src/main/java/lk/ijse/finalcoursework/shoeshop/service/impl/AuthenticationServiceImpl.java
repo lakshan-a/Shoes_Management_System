@@ -10,6 +10,7 @@ import lk.ijse.finalcoursework.shoeshop.persistence.repository.SecurityRepositor
 import lk.ijse.finalcoursework.shoeshop.service.AuthenticationService;
 import lk.ijse.finalcoursework.shoeshop.service.JWTService;
 import lk.ijse.finalcoursework.shoeshop.service.execption.NotFoundException;
+import lk.ijse.finalcoursework.shoeshop.util.Role;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -19,11 +20,12 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.UUID;
+
 /**
- * @version: v0.0.1
- * @author: lakshanR
- * @date: 5/20/2024
- */
+ * @author: Manith Lakvidu,
+ * @Runtime version: 11.0.11+9-b1341.60 amd64
+ **/
 
 @Service
 @RequiredArgsConstructor

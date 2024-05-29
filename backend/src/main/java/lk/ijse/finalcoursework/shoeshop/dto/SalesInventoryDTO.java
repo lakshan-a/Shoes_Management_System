@@ -1,20 +1,21 @@
 package lk.ijse.finalcoursework.shoeshop.dto;
 
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Null;
 import jakarta.validation.constraints.Pattern;
+import lk.ijse.finalcoursework.shoeshop.persistence.entity.Sales;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 /**
- * @version: v0.0.1
- * @author: lakshanR
- * @date: 5/19/2024
- */
-
+ * @author: Manith Lakvidu,
+ * @Runtime version: 11.0.11+9-b1341.60 amd64
+ **/
 
 @Getter
 @Setter

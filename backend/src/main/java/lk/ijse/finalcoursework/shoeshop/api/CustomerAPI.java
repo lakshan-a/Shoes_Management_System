@@ -10,11 +10,9 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 /**
- * @version: v0.0.1
- * @author: lakshanR
- * @date: 5/19/2024
- */
-
+ * @author: Manith Lakvidu,
+ * @Runtime version: 11.0.11+9-b1341.60 amd64
+ **/
 
 @RestController
 @RequestMapping("api/v0/customers")
@@ -53,5 +51,11 @@ public class CustomerAPI {
     @ResponseStatus(HttpStatus.ACCEPTED)
     CustomerDTO getCustomer(@PathVariable("id") String id){
         return customerService.getCustomerDetails(id);
+    }
+
+    @GetMapping("/nextid")
+    @ResponseStatus(HttpStatus.ACCEPTED)
+    String getNextEmployeeCode(){
+        return customerService.genarateNextCustomerCode();
     }
 }

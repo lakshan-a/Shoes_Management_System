@@ -7,14 +7,14 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 /**
- * @version: v0.0.1
- * @author: lakshanR
- * @date: 5/19/2024
- */
-
+ * @author: Manith Lakvidu,
+ * @Runtime version: 11.0.11+9-b1341.60 amd64
+ **/
 
 @Getter
 @Setter
@@ -36,7 +36,7 @@ public class Inventory {
     @Column(name = "category", nullable = false)
     private String category;
 
-    @Column(name = "size", nullable = false)
+    @Column(name = "size")
     private Integer size;
 
     @ManyToOne
@@ -63,6 +63,9 @@ public class Inventory {
 
     @Column(name = "quantity", nullable = false)
     private Integer quantity;
+
+    @Column(name = "p_quantity", nullable = false)
+    private Integer pQuantity;
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy =  "inventory")
     private List<SalesDetails> salesDetails = new ArrayList<>();

@@ -1,6 +1,8 @@
 package lk.ijse.finalcoursework.shoeshop.service.impl;
 
+import lk.ijse.finalcoursework.shoeshop.dto.CustomerDTO;
 import lk.ijse.finalcoursework.shoeshop.dto.UserDTO;
+import lk.ijse.finalcoursework.shoeshop.persistence.entity.Customer;
 import lk.ijse.finalcoursework.shoeshop.persistence.entity.User;
 import lk.ijse.finalcoursework.shoeshop.persistence.repository.UserRepository;
 import lk.ijse.finalcoursework.shoeshop.service.UserService;
@@ -16,11 +18,9 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 /**
- /**
- * @version: v0.0.1
- * @author: lakshanR
- * @date: 5/20/2024
- */
+ * @author: Manith Lakvidu,
+ * @Runtime version: 11.0.11+9-b1341.60 amd64
+ **/
 
 @Service
 @Transactional

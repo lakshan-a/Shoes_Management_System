@@ -7,11 +7,9 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 /**
- * @version: v0.0.1
- * @author: lakshanR
- * @date: 5/19/2024
- */
-
+ * @author: Manith Lakvidu,
+ * @Runtime version: 11.0.11+9-b1341.60 amd64
+ **/
 
 @Getter
 @Setter

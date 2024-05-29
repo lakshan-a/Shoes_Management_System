@@ -16,10 +16,9 @@ import java.util.HashMap;
 import java.util.function.Function;
 
 /**
- * @version: v0.0.1
- * @author: lakshanR
- * @date: 5/20/2024
- */
+ * @author: Manith Lakvidu,
+ * @Runtime version: 11.0.11+9-b1341.60 amd64
+ **/
 
 @Service
 public class JWTServiceImpl implements JWTService {

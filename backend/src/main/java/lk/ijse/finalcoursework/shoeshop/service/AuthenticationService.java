@@ -5,11 +5,9 @@ import lk.ijse.finalcoursework.shoeshop.auth.request.SignUpRequest;
 import lk.ijse.finalcoursework.shoeshop.auth.response.JWTAuthResponse;
 
 /**
- * @version: v0.0.1
- * @author: lakshanR
- * @date: 5/20/2024
- */
-
+ * @author: Manith Lakvidu,
+ * @Runtime version: 11.0.11+9-b1341.60 amd64
+ **/
 
 public interface AuthenticationService {
     JWTAuthResponse signIn(SignInRequest signInRequest);

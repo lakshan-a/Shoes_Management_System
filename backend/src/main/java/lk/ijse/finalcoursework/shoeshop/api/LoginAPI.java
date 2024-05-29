@@ -9,10 +9,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 /**
- * @version: v0.0.1
- * @author: lakshanR
- * @date: 5/20/2024
- */
+ * @author: Manith Lakvidu,
+ * @Runtime version: 11.0.11+9-b1341.60 amd64
+ **/
 
 @RestController
 @RequestMapping("api/v0/auth")
