@@ -1,4 +1,5 @@
 let salesURI = 'http://localhost:8080/app/api/v0/sales'
+let inventoryURI = 'http://localhost:8080/app/api/v0/inventory'
 
 $('.saledatasave').click(function(){
     const saleData = getAllSaleDataFromField();
@@ -81,6 +82,29 @@ $('.saledataget').click(function(){
             clearAllSalesField();
         }
     });
+});
+
+$('.saleitemcode').on('keypress', function(event){
+    if (event.which === 13) {
+        event.preventDefault();
+        $.ajax({
+            url:(inventoryURI+'/'+$('.saleitemcode').val()),
+            method:'PATCH',
+            contentType: 'application/json',
+            headers: {
+                'Authorization': 'Bearer ' + bearerToken
+            },
+
+            success: function(resp){
+                $('.saleitemdescription').val(resp.itemDescription),
+                    $('.saleitemsize').val(resp.size),
+                    $('.saleunitprice').val(resp.unitPriceSale)
+            },
+            error:function(resp){
+                showAlert("error","Oops",resp.message);
+            }
+        });
+    }
 });
 
 $('.saledataupdate').click(function(){

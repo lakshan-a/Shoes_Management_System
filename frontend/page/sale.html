@@ -166,71 +166,82 @@
               <div class="card-title">Sale Details</div>
               <hr>
               <div class="row">
-                <div class="col-md-4 ">
-                  <label for="validationDefault01" class="form-label">Order No :</label>
-                  <input type="text" class="form-control" id="validationDefault01" placeholder="Enter Order No" required>
+                <div class="col-md-4">
+                  <label for="validationDefault01" class="form-label">Order No</label>
+                  <input type="text" class="form-control saleorderno" id="validationDefault01" placeholder="Enter Order No" required>
                 </div>
                 <div class="col-md-4">
-                  <label for="inputState" class="form-label">Customer Name :</label>
-                  <select  class="form-select">
-                    <option selected>Select Customer</option>
-                    <option></option>
-                  </select>
+                  <label for="validationDefault" class="form-label">Customer Name</label>
+                  <!--<select  class="form-select">
+                      <option selected>Select Customer</option>
+                      <option></option>
+                  </select>-->
+                  <input type="text" class="form-control salecustomername" id="validationDefault" placeholder="Enter Order No" required>
                 </div>
                 <div class="col-md-4">
-                  <label for="inputState" class="form-label">Item DESC :</label>
-                  <select  class="form-select">
-                    <option selected>Select DESC</option>
-                    <option></option>
-                  </select>
+                  <label  class="form-label">Item DESC</label>
+                  <!--<select  class="form-select ">
+                      <option selected>Select DESC</option>
+                      <option></option>
+                  </select>-->
+                  <input type="text" class="form-control saleitemdescription"  placeholder="Item Desc" required>
                 </div>
                 <div class="col-md-4 mt-3">
-                  <label for="validationDefault02" class="form-label">Size :</label>
-                  <input type="text" class="form-control"  placeholder="Enter Size" required>
+                  <label for="validationDefault02" class="form-label">Size</label>
+                  <input type="text" class="form-control saleitemsize"  placeholder="Enter Size" required>
                 </div>
                 <div class="col-md-4 mt-3">
-                  <label for="validationDefault02" class="form-label">Unit Price :</label>
-                  <input type="text" class="form-control" id="validationDefault02" placeholder="Enter Unit Price" required>
+                  <label for="validationDefault02" class="form-label">Unit Price</label>
+                  <input type="text" class="form-control saleunitprice" id="validationDefault02" placeholder="Enter Unit Price" required>
                 </div>
                 <div class="col-md-4 mt-3">
-                  <label for="inputState" class="form-label">Item QTY :</label>
-                  <select id="inputState" class="form-select">
-                    <option selected>Select QTY</option>
-                  </select>
+                  <label for="validationDefault03" class="form-label">Item QTY</label>
+                  <!--<select id="inputState" class="form-select">
+                      <option selected>Select QTY</option>
+                  </select>-->
+                  <input type="text" class="form-control saleitemqty" id="validationDefault03" placeholder="Enter Unit Price" required>
+
                 </div>
                 <div class="col-md-4 mt-3">
-                  <label for="inputEmail4" class="form-label">Total Price :</label>
-                  <input type="text" class="form-control" placeholder="Enter Total Price">
+                  <label for="inputEmail4" class="form-label">Total Price</label>
+                  <input type="text" class="form-control saletotalprice" placeholder="Enter Total Price">
                 </div>
                 <div class="col-md-4 mt-3">
-                  <label for="inputEmail4" class="form-label">Purchase date :</label>
-                  <input type="date" class="form-control" id="inputEmail4">
+                  <label for="inputEmail4" class="form-label">Purchase date</label>
+                  <input type="date" class="form-control salepurchasedate" id="inputEmail4">
                 </div>
                 <div class="col-md-4 mt-3">
-                  <label for="inputState" class="form-label">Payment method :</label>
-                  <select id="#" class="form-select">
+                  <label  class="form-label">Payment method</label>
+                  <select id="#" class="form-select salepayementmethod">
                     <option disabled selected>Payment method</option>
-                    <option>Cash</option>
-                    <option>Credit Card</option>
+                    <option>CASH</option>
+                    <option>CARD</option>
                   </select>
                 </div>
                 <div class="col-md-4 mt-3">
-                  <label for="inputPassword4" class="form-label">Add points :</label>
-                  <input type="number" class="form-control" id="inputPassword4" placeholder="Enter Points">
+                  <label for="inputPassword4" class="form-label">Add points</label>
+                  <input type="number" class="form-control salepoints" id="inputPassword4" placeholder="Enter Points">
                 </div>
                 <div class="col-md-4 mt-3">
-                  <label for="inputCity" class="form-label">Cashier Name :</label>
-                  <input type="text" class="form-control" id="inputCity" placeholder="Enter Cashier Name">
+                  <label for="inputCity" class="form-label">Cashier Name</label>
+                  <input type="text" class="form-control salecashiername" id="inputCity" placeholder="Enter Cashier Name">
+                </div>
+                <div class="col-md-4 mt-3">
+                  <label for="inputPassword4" class="form-label">Item Code</label>
+                  <input type="text" class="form-control saleitemcode" id="inputPassword5" placeholder="Enter Points">
                 </div>
 
               </div>
 
               <div class="row">
                 <div class=" my-5 col-md-12">
-                  <button type="button" class="btn btn-light   saledatasave"><i class="icon-lock"></i> Save</button>
-                  <button type="button" class="btn btn-light   saledataupdate"><i class="icon-lock"></i> Update</button>
-                  <button type="button" class="btn btn-light   saledatadelete"><i class="icon-lock"></i> Delete</button>
-                  <button type="button" class="btn btn-light   salealldataget"><i class="icon-lock"></i> Get All</button>
+                  <button type="button" class="btn btn-light   saledatasave"><i class="fa-solid fa-check"></i> Save</button>
+                  <button type="button" class="btn btn-light   saledataupdate"><i class="fa fa-refresh"></i> Update</button>
+                  <button type="button" class="btn btn-light   saledatadelete"><i class="fa-solid fa-trash"></i> Delete</button>
+                  <button type="button" class="btn btn-light   salealldataget"><i class="fa-solid fa-list"></i>  Get All</button>
+                  <button type="button" class="btn btn-light   saleinventoryaddsave"><i class="fa-solid fa-plus"></i>  Add Item</button>
+<!--                  <button  class="btn btn-outline-success saleinventoryaddsave" type="button">Add Item</button>-->
+
                 </div>
               </div>
             </div>
@@ -252,7 +263,7 @@
                     <div class="card-body">
                       <h5 class="card-title">Sale Table</h5>
                       <div class="table-responsive">
-                        <table class="table table-bordered saleitemtable">
+                        <table class="table table-bordered saletable">
                           <thead>
                           <tr>
                             <th scope="col">Code</th>
@@ -270,21 +281,48 @@
                           </tr>
                           </thead>
                           <tbody>
+
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row mt-3">
+        <div class="col-lg-12">
+          <div class="card">
+            <div class="card-body">
+
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="">
+                        <h5 class="card-title col-md-4">Sale Table</h5>
+<!--                        <button  class="btn btn-outline-success saleinventoryaddupdate col-md-4" style="margin-left: 640px;margin-top: -68px;" type="button">Update Item</button>-->
+                        <button type="button" class="btn btn-light   saleinventoryaddupdate" style="margin-left: 806px;margin-top: -68px;"><i class="fa fa-refresh"></i> Update Item</button>
+                      </div>
+                      <div class="table-responsive">
+                        <table class="table table-bordered saleitemtable">
+                          <thead>
                           <tr>
-                            <!--            <th scope="row">1</th>-->
-                            <td>C001</td>
-                            <td>D001</td>
-                            <td>Lakshan</td>
-                            <td>19</td>
-                            <td>09</td>
-                            <td>1800.00</td>
-                            <td>2</td>
-                            <td>3600.00</td>
-                            <td>04/24</td>
-                            <td>Cash</td>
-                            <td>03</td>
-                            <td>Rashmika</td>
+                            <th scope="col">Code</th>
+                            <th scope="col">Item_Desc</th>
+                            <th scope="col">Unit_Price</th>
+                            <th scope="col">Qty</th>
+                            <th scope="col">Size</th>
+                            <th scope="col">Remove</th>
                           </tr>
+                          </thead>
+                          <tbody>
+
                           </tbody>
                         </table>
                       </div>

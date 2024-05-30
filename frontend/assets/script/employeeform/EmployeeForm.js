@@ -40,7 +40,7 @@ fileInput.addEventListener('change', function() {
 });
 
 imagePreview.addEventListener('click', function() {
-    console.log('clicked')
+  console.log('clicked')
   fileInput.click();
 });
 

@@ -1,5 +1,5 @@
 
-var bearerToken = 'eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjpbeyJhdXRob3JpdHkiOiJSb2xlX1VTRVIifV0sInN1YiI6InZpc0BnbWFpbC5jb20iLCJpYXQiOjE3MTY5MTI1MzEsImV4cCI6MTcxNjk5ODkzMX0.X1URJrjYN_GUInmwUI6mDAI5XPbTzXHljzz2VOm_qB4';
+var bearerToken = 'eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjpbeyJhdXRob3JpdHkiOiJSb2xlX1VTRVIifV0sInN1YiI6InZpc0BnbWFpbC5jb20iLCJpYXQiOjE3MTY5OTk3MzQsImV4cCI6MTcxNzA4NjEzNH0.5FYjKi-8EHLIjBIf1mFN0Nk8ip0R-mUfhoRFZRLCFio';
 
 function showAlert(iconType,titleMessage,textMessage){
     Swal.fire({

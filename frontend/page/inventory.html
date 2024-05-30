@@ -30,7 +30,7 @@
     <!-- Template Stylesheet -->
     <!--  <link href="../css/style.css" rel="stylesheet">-->
     <link href="../css/Employee.css" rel="stylesheet">
-<!--    <link href="../css/Inventory.css" rel="stylesheet">-->
+    <!--      <link href="../css/Inventory.css" rel="stylesheet">-->
 
 
     <link href="../asset/css/pace.min.css" rel="stylesheet"/>
@@ -184,11 +184,11 @@
 
                                 <div class="row col-md-8">
                                     <div class="col-md-6">
-                                        <label  class="form-label">Item Code :</label>
+                                        <label  class="form-label">Item Code</label>
                                         <input type="text" class="form-control inventorycode" id="inventorycode"  placeholder="Enter Item Code" required >
                                     </div>
                                     <div class="col-md-6">
-                                        <label  class="form-label">Item Description :</label>
+                                        <label  class="form-label">Item Description</label>
                                         <input type="text" class="form-control inventorydescription" id="inventorydescription" placeholder="Enter Description" required>
                                     </div>
                                     <!--<div class="col-md-6">
@@ -196,15 +196,15 @@
                                         <input type="text" class="form-control inventorycategory"  id="inventorycategory" placeholder="Enter Category" required>
                                     </div>-->
                                     <div class="col-md-6">
-                                        <label  class="form-label">Size :</label>
+                                        <label  class="form-label">Size</label>
                                         <input type="text" class="form-control inventorysize" id="inventorysize" placeholder="Enter Size" required>
                                     </div>
                                     <div class="col-md-6">
-                                        <label  class="form-label">Item Quantity :</label>
+                                        <label  class="form-label">Item Quantity</label>
                                         <input type="number" class="form-control inventoryquantity"  placeholder="Enter Quantity" required>
                                     </div>
                                     <div class="col-md-6">
-                                        <label  class="form-label">Supplier Code :</label>
+                                        <label  class="form-label">Supplier Code</label>
                                         <!--<select id="inventorysuppliercode" class="form-select inventorysuppliercode">
                                             <option selected>Select Code</option>
                                         </select>-->
@@ -215,33 +215,33 @@
 
                             </div>
 
-                            <div class="row">
+                            <div class="row mt-2">
 
-                                <div class="col-md-4">
-                                    <label  class="form-label">Supplier Name :</label>
+                                <div class="col-md-4 ">
+                                    <label  class="form-label">Supplier Name</label>
                                     <!--<select id="inventorysuppliername" class="form-select inventorysuppliername">
                                         <option selected>Select Name</option>
                                     </select>-->
-                                    <input type="text" class="form-control inventorysuppliercode"  placeholder="Enter Quantity" required>
+                                    <input type="text" class="form-control inventorysuppliername"  placeholder="Enter Quantity" required>
                                 </div>
                                 <div class="col-md-4">
-                                    <label  class="form-label">Unit Price - Sale :</label>
+                                    <label  class="form-label">Unit Price - Sale</label>
                                     <input type="number" class="form-control inventorysaleprice" id="inventorysaleprice" placeholder="Enter Sale" required>
                                 </div>
                                 <div class="col-md-4">
-                                    <label  class="form-label">Buy Price :</label>
+                                    <label  class="form-label">Buy Price</label>
                                     <input type="number" class="form-control inventorybuyprice" id="inventoryquantity" placeholder="Enter Quantity" required>
                                 </div>
                                 <div class="col-md-4">
-                                    <label  class="form-label">Expected Profit :</label>
+                                    <label  class="form-label">Expected Profit</label>
                                     <input type="number" class="form-control inventoryexpectedprofit"  id="inventoryexpectedprofit" placeholder="Enter Profit" required>
                                 </div>
                                 <div class="col-md-4">
-                                    <label class="form-label">Profit Margin :</label>
+                                    <label class="form-label">Profit Margin</label>
                                     <input type="text" class="form-control inventoryprofitmargin" id="inventoryprofitmargin"  placeholder="Enter Profit Margin" required>
                                 </div>
                                 <div class="col-md-4">
-                                    <label for="inventorystatus" class="form-label">Status :</label>
+                                    <label for="inventorystatus" class="form-label">Status</label>
                                     <select id="inventorystatus" class="form-select inventorystatus">
                                         <option selected>Select Status</option>
                                         <option value="1">Low</option>
@@ -254,10 +254,11 @@
 
                             <div class="row">
                                 <div class=" my-5 col-md-12">
-                                    <button type="submit" class="btn btn-light   inventorydatasave"><i class="icon-lock"></i> Save</button>
-                                    <button type="button" class="btn btn-light   inventorydataupdate"><i class="icon-lock"></i> Update</button>
-                                    <button type="button" class="btn btn-light   inventorydatadelete"><i class="icon-lock"></i> Delete</button>
-                                    <button type="button" class="btn btn-light   inventoryalldataget"><i class="icon-lock"></i> Get All</button>
+                                    <button type="button" class="btn btn-light   inventorydatasave"><i class="fa-solid fa-check"></i> Save</button>
+                                    <button type="button" class="btn btn-light   inventorydataupdate"><i class="fa fa-refresh"></i> Update</button>
+                                    <button type="button" class="btn btn-light   inventorydatadelete"><i class="fa-solid fa-trash"></i> Delete</button>
+                                    <button type="button" class="btn btn-light   inventoryalldataget"><i class="fa-solid fa-list"></i>  Get All</button>
+
                                 </div>
                             </div>
                         </div>
@@ -324,71 +325,6 @@
                 </div>
 
             </div>
-
-            <div class="modal fade" id="inventoryModal" tabindex="-1" aria-labelledby="inventoryModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="inventoryModalLabel">Item Details</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <form>
-                                <div class="mb-3">
-                                    <label for="occasion" class="form-label labelfont">Occasion</label>
-                                    <select class="form-select inputfont occasion" id="occasion" aria-label="Default select example">
-                                        <option class="selectedfont" selected>Select Occasion</option>
-                                        <option class="selectedfont" value="1">FORMAL</option>
-                                        <option class="selectedfont" value="2">CASUAL</option>
-                                        <option class="selectedfont" value="3">INDUSTRIAL</option>
-                                        <option class="selectedfont" value="4">SPORT</option>
-                                    </select>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="shoeverities" class="form-label labelfont">Verities</label>
-                                    <select class="form-select inputfont shoeverities" id="shoeverities" aria-label="Default select example">
-                                        <option class="selectedfont" selected>Select Verities</option>
-                                        <option class="selectedfont" value="1">HEEL</option>
-                                        <option class="selectedfont" value="2">FLATS</option>
-                                        <option class="selectedfont" value="3">WEDGES</option>
-                                        <option class="selectedfont" value="4">FLIP FLOPS</option>
-                                        <option class="selectedfont" value="5">SANDALS</option>
-                                        <option class="selectedfont" value="6">SHOES</option>
-                                        <option class="selectedfont" value="7">SLIPPERS</option>
-                                    </select>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="inventorycategory" class="form-label labelfont">Category</label>
-                                    <select class="form-select inputfont inventorycategory" id="inventorycategory" aria-label="Default select example">
-                                        <option class="selectedfont" selected>Select Category</option>
-                                        <option class="selectedfont" value="1">MALE</option>
-                                        <option class="selectedfont" value="2">FEMALE</option>
-                                    </select>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="otherverities" class="form-label labelfont">Verities</label>
-                                    <select class="form-select inputfont otherverities" id="otherverities" aria-label="Default select example">
-                                        <option class="selectedfont" selected>Select Verities</option>
-                                        <option class="selectedfont" value="1">SHOE SHAMPOO</option>
-                                        <option class="selectedfont" value="2">POLISH BLACK</option>
-                                        <option class="selectedfont" value="3">POLISH BROWN</option>
-                                        <option class="selectedfont" value="4">POLISH DARK BROWN</option>
-                                        <option class="selectedfont" value="5">FULL-SOCKS</option>
-                                        <option class="selectedfont" value="6">HALF-SOCKS</option>
-                                    </select>
-                                </div>
-                                <div class="mb-3 inventorypopupformbuttoncontainer">
-                                    <div class="col-12 d-flex flex-wrap justify-content-end">
-                                        <button type="button" class="btn btn-outline-primary inventorypopupbtn">OK</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
             <!--start overlay-->
             <div class="overlay toggle-menu"></div>
             <!--end overlay-->
@@ -396,6 +332,100 @@
         <!-- End Of Customer-->
 
     </div><!--End content-wrapper-->
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Bootstrap Modal -->
+    <div class="modal fade" id="inventoryModal" tabindex="-1" aria-labelledby="inventoryModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content" style="background-image: url(../asset/images/bg-themes/4.png);">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="inventoryModalLabel">Item Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="">
+                    <div class="container-fluid">
+
+                        <div class="row mt-3">
+                            <div class="col-lg-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <!--                                        <div class="card-title">Inventory Details</div>-->
+                                        <!--                                        <hr>-->
+                                        <form>
+                                            <div class="mb-3">
+                                                <label for="occasion" class="form-label labelfont">Occasion</label>
+                                                <select class="form-select inputfont occasion" id="occasion" aria-label="Default select example">
+                                                    <option class="selectedfont" selected>Select Occasion</option>
+                                                    <option class="selectedfont" value="1">FORMAL</option>
+                                                    <option class="selectedfont" value="2">CASUAL</option>
+                                                    <option class="selectedfont" value="3">INDUSTRIAL</option>
+                                                    <option class="selectedfont" value="4">SPORT</option>
+                                                </select>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="shoeverities" class="form-label labelfont">Verities</label>
+                                                <select class="form-select inputfont shoeverities" id="shoeverities" aria-label="Default select example">
+                                                    <option class="selectedfont" selected>Select Verities</option>
+                                                    <option class="selectedfont" value="1">HEEL</option>
+                                                    <option class="selectedfont" value="2">FLATS</option>
+                                                    <option class="selectedfont" value="3">WEDGES</option>
+                                                    <option class="selectedfont" value="4">FLIP FLOPS</option>
+                                                    <option class="selectedfont" value="5">SANDALS</option>
+                                                    <option class="selectedfont" value="6">SHOES</option>
+                                                    <option class="selectedfont" value="7">SLIPPERS</option>
+                                                </select>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="inventorycategory" class="form-label labelfont">Category</label>
+                                                <select class="form-select inputfont inventorycategory" id="inventorycategory" aria-label="Default select example">
+                                                    <option class="selectedfont" selected>Select Category</option>
+                                                    <option class="selectedfont" value="1">MALE</option>
+                                                    <option class="selectedfont" value="2">FEMALE</option>
+                                                </select>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="otherverities" class="form-label labelfont">Verities</label>
+                                                <select class="form-select inputfont otherverities" id="otherverities" aria-label="Default select example">
+                                                    <option class="selectedfont" selected>Select Verities</option>
+                                                    <option class="selectedfont" value="1">SHOE SHAMPOO</option>
+                                                    <option class="selectedfont" value="2">POLISH BLACK</option>
+                                                    <option class="selectedfont" value="3">POLISH BROWN</option>
+                                                    <option class="selectedfont" value="4">POLISH DARK BROWN</option>
+                                                    <option class="selectedfont" value="5">FULL-SOCKS</option>
+                                                    <option class="selectedfont" value="6">HALF-SOCKS</option>
+                                                </select>
+                                            </div>
+                                            <div class="mb-3 inventorypopupformbuttoncontainer">
+                                                <div class="col-12 d-flex flex-wrap justify-content-end">
+                                                    <button type="button" class="btn btn-light   inventorypopupbtn"><i class="fa-solid fa-check"></i> OK</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--popupForm End -->
+
+
 
     <!--Start Back To Top Button-->
     <a href="#" class="back-to-top"><i class="fa fa-angle-double-up"></i> </a>
@@ -428,7 +458,7 @@
 
 <!-- Template Javascript -->
 <script src="../js/main.js"></script>
-<script src="../ajax/employee/Employee.js"></script>
+<script src="../ajax/inventory/Inventory.js"></script>
 <script src="../assets/script/inventoryform/InventoryForm.js"></script>
 <script src="../assets/script/jquery-3.7.1.min.js"></script>
 <script src="../ajax/GlobalAttr.js"></script>

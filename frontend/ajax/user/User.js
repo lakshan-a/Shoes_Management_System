@@ -2,6 +2,7 @@ let userURI = 'http://localhost:8080/app/api/v0/user'
 let userloginURI = 'http://localhost:8080/app/api/v0/auth'
 
 $('.userdatasave').click(function(){
+    console.log("Hello")
     const userData = getAllUserDataFromField();
     $.ajax({
         url:(userloginURI+'/'+'signup'),

@@ -2,9 +2,10 @@ let inventoryURI = 'http://localhost:8080/app/api/v0/inventory'
 let inventoryFormData = new FormData();
 
 $('.inventorydatasave').click(function(){
+    console.log("Hllo")
     let inventoryData = JSON.stringify(getAllInventoryDataFromField());
     inventoryFormData.append('data', new Blob([inventoryData], { type: 'application/json' }));
-    let inventoryfileInput = $('.inventoryimage')[0];
+    let inventoryfileInput = $('#inventory-file-input')[0];
     if (inventoryfileInput.files.length > 0) {
         inventoryFormData.append('itempic', inventoryfileInput.files[0]);
     }
@@ -40,6 +41,7 @@ $('.inventorydataget').click(function(){
             clearAllInventoryField();
             $('.inventorycode').val(resp.itemCode)
             $('.inventorydescription').val(resp.itemDescription),
+                setReponseInventoryImage(resp.itemPicture),
                 $('.inventorycategory option').each(function() {
                     if ($(this).text() === resp.category) {
                         $(this).prop('selected', true);
@@ -175,6 +177,7 @@ function getAllInventoryDataFromField(){
         expectedProfit: $('.inventoryexpectedprofit').val(),
         profitMargin: $('.inventoryprofitmargin').val(),
         status: $('.inventorystatus').find('option:selected').text(),
-        quantity: $('.inventoryquantity').val()
+        quantity: $('.inventoryquantity').val(),
+        pquantity: $('.inventoryquantity').val()
     }
 }
