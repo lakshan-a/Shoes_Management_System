@@ -3,11 +3,12 @@ package lk.ijse.finalcoursework.shoeshop.service;
 import lk.ijse.finalcoursework.shoeshop.dto.SalesDTO;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * @version: v0.0.1
  * @author: lakshanR
- * @date: 5/22/2024
+ * @date: 5/18/2024
  */
 
 public interface SaleService {
@@ -17,4 +18,6 @@ public interface SaleService {
     void updateSales(String id, SalesDTO salesDTO);
     void deleteSales(String id);
     String nextOrderCode();
+    Map<String, Double> getWeeklyProfit();
+    Double getMonthlyRevenue();
 }

@@ -8,11 +8,12 @@ import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * @version: v0.0.1
  * @author: lakshanR
- * @date: 5/21/2024
+ * @date: 5/22/2024
  */
 
 @RestController
@@ -59,5 +60,17 @@ public class SalesAPI {
     @ResponseStatus(HttpStatus.ACCEPTED)
     String getNextOrderCode(){
         return saleService.nextOrderCode();
+    }
+
+    @GetMapping("/weeklyprofit")
+    @ResponseStatus(HttpStatus.ACCEPTED)
+    Map<String, Double> getWeeklyProfit(){
+        return saleService.getWeeklyProfit();
+    }
+
+    @GetMapping("/monthlyprofit")
+    @ResponseStatus(HttpStatus.ACCEPTED)
+    Double getMonthlRevenue(){
+        return saleService.getMonthlyRevenue();
     }
 }

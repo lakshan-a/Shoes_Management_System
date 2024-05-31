@@ -27,7 +27,7 @@ public class SalesDetails {
     @Column(name = "item_description")
     private String itemDescription;
 
-    @Column(name = "size", nullable = false)
+    @Column(name = "size", nullable = true)
     private Integer size;
 
     @Column(name = "unit_price_sale", nullable = false)

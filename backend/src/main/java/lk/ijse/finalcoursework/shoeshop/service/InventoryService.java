@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * @version: v0.0.1
  * @author: lakshanR
- * @date: 5/21/2024
+ * @date: 5/18/2024
  */
 
 public interface InventoryService {
@@ -17,4 +17,5 @@ public interface InventoryService {
     void updateInventory(String id, InventoryDTO inventoryDTO);
     void deleteInventory(String id);
     String nextInventoryCode(String code);
+    List<InventoryDTO> getMostSaleItem();
 }

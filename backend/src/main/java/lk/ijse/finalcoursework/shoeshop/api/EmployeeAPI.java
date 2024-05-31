@@ -15,7 +15,7 @@ import java.util.List;
 /**
  * @version: v0.0.1
  * @author: lakshanR
- * @date: 5/21/2024
+ * @date: 5/20/2024
  */
 
 @RestController
@@ -76,5 +76,11 @@ public class EmployeeAPI {
     @ResponseStatus(HttpStatus.ACCEPTED)
     String getNextEmployeeCode(){
         return employeeService.nextEmployeeCode();
+    }
+
+    @GetMapping("/dob")
+    @ResponseStatus(HttpStatus.CREATED)
+    List<EmployeeDTO>getAllEmployeesOrderByDob(){
+        return employeeService.findAllEmployeesOrderByDob();
     }
 }

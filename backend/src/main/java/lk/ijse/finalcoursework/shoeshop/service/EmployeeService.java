@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * @version: v0.0.1
  * @author: lakshanR
- * @date: 5/20/2024
+ * @date: 5/18/2024
  */
 
 public interface EmployeeService {
@@ -17,4 +17,5 @@ public interface EmployeeService {
     void updateEmployee(String id, EmployeeDTO employeeDTO);
     void deleteEmployee(String id);
     String nextEmployeeCode();
+    List<EmployeeDTO> findAllEmployeesOrderByDob();
 }

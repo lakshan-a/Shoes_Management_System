@@ -5,11 +5,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-/**
- * @version: v0.0.1
- * @author: lakshanR
- * @date: 5/17/2024
- */
 @SpringBootApplication
 public class ShoeshopApplication {
 

@@ -30,7 +30,7 @@ import java.util.stream.Collectors;
 /**
  * @version: v0.0.1
  * @author: lakshanR
- * @date: 5/22/2024
+ * @date: 5/20/2024
  */
 
 @Service
@@ -50,7 +50,6 @@ public class SaleServiceImpl implements SaleService {
 
     @Override
     public List<SalesDTO> getAllSales() {
-        //getWeeklyProfit();
         List<Sales> salesList = salesRepository.findAll();
         return salesList.stream().map(sales -> {
             SalesDTO salesDTO = modelMapper.map(sales, SalesDTO.class);
@@ -163,6 +162,7 @@ public class SaleServiceImpl implements SaleService {
 
     protected Boolean maintainInventoryQuantity(SalesDTO salesDTO){
         boolean valid = false;
+        int quantity;
         for (int i = 0; i<salesDTO.getInventory().size();i++){
             SalesInventoryDTO inventoryDTO = salesDTO.getInventory().get(i);
             String itemCode = inventoryDTO.getInventory().getItemCode();
@@ -171,7 +171,15 @@ public class SaleServiceImpl implements SaleService {
             InventoryDTO inventory = modelMapper.map(inventoryRepository.findByItemCode(itemCode),InventoryDTO.class);
             if(inventory.getQuantity()>0){
                 if(inventory.getQuantity()-inventoryDTO.getQuantity()>=0){
-                    inventory.setQuantity(inventory.getQuantity()-inventoryDTO.getQuantity());
+                    quantity = inventory.getQuantity()-inventoryDTO.getQuantity();
+                    inventory.setQuantity(quantity);
+                    if(quantity>100){
+                        inventory.setStatus("available");
+                    }else if(quantity<=100){
+                        inventory.setStatus("low");
+                    }else if(quantity==0){
+                        inventory.setStatus("not");
+                    }
                     inventoryRepository.save(modelMapper.map(inventory, Inventory.class));
                     valid = true;
                 }else{
@@ -186,11 +194,12 @@ public class SaleServiceImpl implements SaleService {
         return valid;
     }
 
-    public void getWeeklyProfit(){
+    public Map<String, Double> getWeeklyProfit(){
         Map<String, Double> dataList = new HashMap<>();
-        List<Date> dates = salesRepository.findAllPurchaseDate();
+        List<Date> dates = new ArrayList<>();
         int quantity;
         double dayProfit = 0;
+        dates = salesRepository.findAllPurchaseDate();
         for (Date date:dates){
             if(convertToLocalDateFormat(String.valueOf(date))){
                 List<Sales> sales = salesRepository.findAllByPurchaseDate(date);
@@ -221,6 +230,12 @@ public class SaleServiceImpl implements SaleService {
             }
         }
         System.out.println(dataList);
+        return dataList;
+    }
+
+    @Override
+    public Double getMonthlyRevenue() {
+        return salesRepository.getCurrentMonthTotalRevenue();
     }
 
     private Boolean convertToLocalDateFormat(String dateTimeString){

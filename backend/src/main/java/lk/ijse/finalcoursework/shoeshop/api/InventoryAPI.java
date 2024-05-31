@@ -15,7 +15,7 @@ import java.util.List;
 /**
  * @version: v0.0.1
  * @author: lakshanR
- * @date: 5/22/2024
+ * @date: 5/20/2024
  */
 
 @RestController
@@ -70,5 +70,10 @@ public class InventoryAPI {
     @ResponseStatus(HttpStatus.ACCEPTED)
     InventoryDTO getInventory(@PathVariable("id") String id){
         return inventoryService.getInventoryDetails(id);
+    }
+
+    @GetMapping("/mostsaleitem")
+    List<InventoryDTO> getMostSaleInvetory(){
+        return inventoryService.getMostSaleItem();
     }
 }

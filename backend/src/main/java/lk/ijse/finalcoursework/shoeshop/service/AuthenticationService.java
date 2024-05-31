@@ -7,8 +7,9 @@ import lk.ijse.finalcoursework.shoeshop.auth.response.JWTAuthResponse;
 /**
  * @version: v0.0.1
  * @author: lakshanR
- * @date: 5/20/2024
+ * @date: 5/18/2024
  */
+
 public interface AuthenticationService {
     JWTAuthResponse signIn(SignInRequest signInRequest);
     JWTAuthResponse signUp(SignUpRequest signUpRequest);

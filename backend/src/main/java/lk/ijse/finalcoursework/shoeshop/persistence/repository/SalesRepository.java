@@ -11,7 +11,7 @@ import java.util.List;
 /**
  * @version: v0.0.1
  * @author: lakshanR
- * @date: 5/21/2024
+ * @date: 5/18/2024
  */
 
 public interface SalesRepository extends JpaRepository<Sales,String> {
@@ -25,4 +25,6 @@ public interface SalesRepository extends JpaRepository<Sales,String> {
     String findLatestOrderCode();
     @Query(value = "SELECT * FROM sales s WHERE DATE(s.purchase_date) = :today", nativeQuery = true)
     List<Sales> findTodaySales(@Param("today") String today);
+    @Query(value = "SELECT COALESCE(SUM(total_price), 0) FROM sales WHERE MONTH(purchase_date) = MONTH(CURRENT_DATE()) AND YEAR(purchase_date) = YEAR(CURRENT_DATE())", nativeQuery = true)
+    Double getCurrentMonthTotalRevenue();
 }
