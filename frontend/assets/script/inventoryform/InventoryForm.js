@@ -4,37 +4,37 @@ $('.inventorycode').attr('readonly', false);
 let selected = [];
 let AllInventory = [];
 let Inventory = {
-    itemCode: '',
-    itemDescription: '',
-    itemPicture: '',
-    category: '',
-    size: '',
-    supplierCode: '',
-    supplierName: '',
-    unitPriceSale: '',
-    unitPriceBuy: '',
-    expectedProfit: '',
-    profitMargin: '',
-    status: '',
-    quantity: ''
+  itemCode: '',
+  itemDescription: '',
+  itemPicture: '',
+  category: '',
+  size: '',
+  supplierCode: '',
+  supplierName: '',
+  unitPriceSale: '',
+  unitPriceBuy: '',
+  expectedProfit: '',
+  profitMargin: '',
+  status: '',
+  quantity: ''
 };
 
 
 inventoryfileInput.addEventListener('change', function() {
-    const file = this.files[0];
-    if (file) {
-        const img = document.createElement('img');
-        img.src = URL.createObjectURL(file);
-        inventoryimagePreview.innerHTML = '';
-        inventoryimagePreview.appendChild(img);
-        console.log('Image Path:', file.name); // Log image path
-    } else {
-        const defaultImg = document.createElement('img');
-        defaultImg.src = 'default-image.jpg';
-        inventoryimagePreview.innerHTML = '';
-        inventoryimagePreview.appendChild(defaultImg);
-        console.log('No image selected'); // Log when no image is selected
-    }
+  const file = this.files[0];
+  if (file) {
+    const img = document.createElement('img');
+    img.src = URL.createObjectURL(file);
+    inventoryimagePreview.innerHTML = '';
+    inventoryimagePreview.appendChild(img);
+    console.log('Image Path:', file.name); // Log image path
+  } else {
+    const defaultImg = document.createElement('img');
+    defaultImg.src = 'default-image.jpg';
+    inventoryimagePreview.innerHTML = '';
+    inventoryimagePreview.appendChild(defaultImg);
+    console.log('No image selected'); // Log when no image is selected
+  }
 });
 
 inventoryimagePreview.addEventListener('click', function() {
@@ -237,35 +237,35 @@ $(document).ready(function(){
 
 
 function clearAllInventoryField(){
-    $('.inventorycode').val('');
-    $('.inventorydescription').val('');
-    inventoryImageToDefault();
-    $('.inventoryquantity').val('');
-    $('.inventorystatus').prop('selectedIndex', 0).focus();
-    $('.inventorysize').val('');
-    $('.inventorysuppliercode').val('');
-    $('.inventorysuppliername').val('');
-    $('.inventoryexpectedprofit').val('');
-    $('.inventorybuyprice').val('');
-    $('.inventorysaleprice').val('');
-    $('.inventoryprofitmargin').val('');
+  $('.inventorycode').val('');
+  $('.inventorydescription').val('');
+  inventoryImageToDefault();
+  $('.inventoryquantity').val('');
+  $('.inventorystatus').prop('selectedIndex', 0).focus();
+  $('.inventorysize').val('');
+  $('.inventorysuppliercode').val('');
+  $('.inventorysuppliername').val('');
+  $('.inventoryexpectedprofit').val('');
+  $('.inventorybuyprice').val('');
+  $('.inventorysaleprice').val('');
+  $('.inventoryprofitmargin').val('');
 }
 
 function dataToInventoryTable(inventory){
-    let backgroundc;
-    let fcolor;
-    if(inventory.status=="Available"){
-        backgroundc = 'rgba(65, 254, 65, 0.208)';
-        fcolor = 'rgb(0, 166, 0)';
-    }else if(inventory.status=="Low"){
-        backgroundc = 'rgba(222, 254, 65, 0.208)';
-        fcolor = 'rgb(166, 166, 0)';
-    }else{
-        backgroundc = 'rgba(254, 65, 65, 0.208)';
-        fcolor = 'rgb(166, 0, 0)';
-    }
+  let backgroundc;
+  let fcolor;
+  if(inventory.status=="Available"){
+    backgroundc = 'rgba(65, 254, 65, 0.208)';
+    fcolor = 'rgb(0, 166, 0)';
+  }else if(inventory.status=="Low"){
+    backgroundc = 'rgba(222, 254, 65, 0.208)';
+    fcolor = 'rgb(166, 166, 0)';
+  }else{
+    backgroundc = 'rgba(254, 65, 65, 0.208)';
+    fcolor = 'rgb(166, 0, 0)';
+  }
 
-    let row = `<tr>
+  let row = `<tr>
                 <th scope="row">${inventory.itemCode}</th>
                 <td>${inventory.itemDescription}</td>
                 <td>${inventory.category}</td>
@@ -284,27 +284,27 @@ function dataToInventoryTable(inventory){
                 </td>
             </tr>`;
 
-    $(".inventorytable").append(row);
+  $(".inventorytable").append(row);
 }
 
 function findInventoryCategory(){
-    if(selected.length==3){
-        if(selected[2]=="M"){
-            return "MALE";
-        }else{
-            return "FEMALE"
-        }
+  if(selected.length==3){
+    if(selected[2]=="M"){
+      return "MALE";
     }else{
-        return "OTHER";
+      return "FEMALE"
     }
+  }else{
+    return "OTHER";
+  }
 }
 
 function inventoryImageToDefault(){
-    const defaultImg = document.createElement('img');
-    defaultImg.src = 'assets/img/EmployeeForm/imageupload.png';
-    inventoryimagePreview.innerHTML = '';
-    inventoryimagePreview.appendChild(defaultImg);
-    defaultImg.classList.add('inventorydefaultimg')
+  const defaultImg = document.createElement('img');
+  defaultImg.src = 'assets/img/EmployeeForm/imageupload.png';
+  inventoryimagePreview.innerHTML = '';
+  inventoryimagePreview.appendChild(defaultImg);
+  defaultImg.classList.add('inventorydefaultimg')
 }
 function setReponseInventoryImage(image){
     const img = document.createElement('img');

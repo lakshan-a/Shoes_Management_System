@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Inventory</title>
+    <title>Hello Shoe</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -69,7 +69,7 @@
         <ul class="sidebar-menu do-nicescrol">
             <li class="sidebar-header">MAIN NAVIGATION</li>
             <li>
-                <a href="dashboard.html">
+                <a href="../dashboard.html">
                     <i class="zmdi zmdi-view-dashboard"></i> <span>Dashboard</span>
                 </a>
             </li>
@@ -145,7 +145,7 @@
                     </a>
                     <ul class="dropdown-menu dropdown-menu-right">
 
-                        <li class="dropdown-item"><i class="icon-power mr-2"></i> Logout</li>
+                        <a href="../index.html"> <li class="dropdown-item"><i class="icon-power mr-2"></i> Logout</li></a>
                     </ul>
                 </li>
             </ul>
@@ -186,29 +186,33 @@
                                     <div class="col-md-6">
                                         <label  class="form-label">Item Code</label>
                                         <input type="text" class="form-control inventorycode" id="inventorycode"  placeholder="Enter Item Code" required >
+                                        <div class="error-message inventorycode-error">Invalid Item code</div>
+
                                     </div>
                                     <div class="col-md-6">
                                         <label  class="form-label">Item Description</label>
                                         <input type="text" class="form-control inventorydescription" id="inventorydescription" placeholder="Enter Description" required>
+                                        <div class="error-message inventorydescription-error">Invalid Item descrption</div>
+
                                     </div>
-                                    <!--<div class="col-md-6">
-                                        <label  class="form-label">Category</label>
-                                        <input type="text" class="form-control inventorycategory"  id="inventorycategory" placeholder="Enter Category" required>
-                                    </div>-->
+
                                     <div class="col-md-6">
                                         <label  class="form-label">Size</label>
                                         <input type="text" class="form-control inventorysize" id="inventorysize" placeholder="Enter Size" required>
+                                        <div class="error-message inventorysize-error">Invalid Size</div>
+
                                     </div>
                                     <div class="col-md-6">
                                         <label  class="form-label">Item Quantity</label>
                                         <input type="number" class="form-control inventoryquantity"  placeholder="Enter Quantity" required>
+                                        <div class="error-message inventoryquantity-error">Invalid item quantity</div>
+
                                     </div>
                                     <div class="col-md-6">
                                         <label  class="form-label">Supplier Code</label>
-                                        <!--<select id="inventorysuppliercode" class="form-select inventorysuppliercode">
-                                            <option selected>Select Code</option>
-                                        </select>-->
                                         <input type="text" class="form-control inventorysuppliercode"  placeholder="Enter Quantity" required>
+                                        <div class="error-message inventorysuppliercode-error">Invalid supplier code</div>
+
 
                                     </div>
                                 </div>
@@ -219,26 +223,33 @@
 
                                 <div class="col-md-4 ">
                                     <label  class="form-label">Supplier Name</label>
-                                    <!--<select id="inventorysuppliername" class="form-select inventorysuppliername">
-                                        <option selected>Select Name</option>
-                                    </select>-->
                                     <input type="text" class="form-control inventorysuppliername"  placeholder="Enter Quantity" required>
+                                    <div class="error-message inventorysuppliername-error">Invalid supplier name</div>
+
                                 </div>
                                 <div class="col-md-4">
                                     <label  class="form-label">Unit Price - Sale</label>
                                     <input type="number" class="form-control inventorysaleprice" id="inventorysaleprice" placeholder="Enter Sale" required>
+                                    <div class="error-message inventorysaleprice-error">Invalid unit price</div>
+
                                 </div>
                                 <div class="col-md-4">
                                     <label  class="form-label">Buy Price</label>
                                     <input type="number" class="form-control inventorybuyprice" id="inventoryquantity" placeholder="Enter Quantity" required>
+                                    <div class="error-message inventorybuyprice-error">Invalid buy price</div>
+
                                 </div>
                                 <div class="col-md-4">
                                     <label  class="form-label">Expected Profit</label>
                                     <input type="number" class="form-control inventoryexpectedprofit"  id="inventoryexpectedprofit" placeholder="Enter Profit" required>
+                                    <div class="error-message inventoryexpectedprofit-error">Invalid expected profit</div>
+
                                 </div>
                                 <div class="col-md-4">
                                     <label class="form-label">Profit Margin</label>
                                     <input type="text" class="form-control inventoryprofitmargin" id="inventoryprofitmargin"  placeholder="Enter Profit Margin" required>
+                                    <div class="error-message inventoryprofitmargin-error">Invalid profit margin</div>
+
                                 </div>
                                 <div class="col-md-4">
                                     <label for="inventorystatus" class="form-label">Status</label>
@@ -462,6 +473,7 @@
 <script src="../assets/script/inventoryform/InventoryForm.js"></script>
 <script src="../assets/script/jquery-3.7.1.min.js"></script>
 <script src="../ajax/GlobalAttr.js"></script>
+<script src="../validation/allform/AllValidation.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 

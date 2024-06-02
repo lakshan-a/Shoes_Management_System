@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>User</title>
+    <title>Hello Shoe</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -28,7 +28,7 @@
     <link href="../css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <!--  <link href="../css/style.css" rel="stylesheet">-->
+      <link href="../css/style.css" rel="stylesheet">
     <!--  <link href="../css/Customer.css" rel="stylesheet">-->
     <!--  <link rel="stylesheet" href="../font/Heebo/stylesheet.css">-->
 
@@ -70,7 +70,7 @@
         <ul class="sidebar-menu do-nicescrol">
             <li class="sidebar-header">MAIN NAVIGATION</li>
             <li>
-                <a href="dashboard.html">
+                <a href="../dashboard.html">
                     <i class="zmdi zmdi-view-dashboard"></i> <span>Dashboard</span>
                 </a>
             </li>
@@ -146,7 +146,7 @@
                     </a>
                     <ul class="dropdown-menu dropdown-menu-right">
 
-                        <li class="dropdown-item"><i class="icon-power mr-2"></i> Logout</li>
+                        <a href="../index.html"> <li class="dropdown-item"><i class="icon-power mr-2"></i> Logout</li></a>
                     </ul>
                 </li>
             </ul>
@@ -174,10 +174,14 @@
                                             <div class="col-md-4 firstcontainerfirstpart">
                                                 <label for="exampleFormControlInput1" class="form-label labelfont">Email</label>
                                                 <input type="email" class="form-control inputfont useremail" id="exampleFormControlInput1" placeholder="Enter Email">
+                                                <div class="error-message useremail-error">Invalid email</div>
+
                                             </div>
                                             <div class="col-md-4 firstcontainersecondpart">
                                                 <label for="exampleFormControlInput1" class="form-label labelfont">Password</label>
-                                                <input type="email" class="form-control inputfont userpassword" id="exampleFormControlInput1" placeholder="Enter Password">
+                                                <input type="email" class="form-control inputfont userpassword" id="#" placeholder="Enter Password">
+                                                <div class="error-message userpassword-error">Invalid password</div>
+
                                             </div>
                                             <div class="col-md-4 firstcontainerthirdpart">
                                                 <label for="exampleFormControlInput1" class="form-label labelfont">Role</label>
@@ -344,6 +348,7 @@
 <script src="../ajax/user/User.js"></script>
 <script src="../assets/script/userform/UserForm.js"></script>
 <script src="../assets/script/jquery-3.7.1.min.js"></script>
+<script src="../validation/allform/AllValidation.js"></script>
 <script src="../ajax/GlobalAttr.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 

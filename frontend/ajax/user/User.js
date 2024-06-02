@@ -2,6 +2,7 @@ let userURI = 'http://localhost:8080/app/api/v0/user'
 let userloginURI = 'http://localhost:8080/app/api/v0/auth'
 
 $('.userdatasave').click(function(){
+    console.log("Hello")
     const userData = getAllUserDataFromField();
     $.ajax({
         url:(userloginURI+'/'+'signup'),
@@ -11,7 +12,7 @@ $('.userdatasave').click(function(){
         headers: {
             'Authorization': 'Bearer ' + bearerToken
         },
-
+    
         success: function(resp){
             showAlert("success","Success","User Saved Sucessfully.");
             clearAllUserField();
@@ -29,16 +30,16 @@ $('.userdataget').click(function(){
         headers: {
             'Authorization': 'Bearer ' + bearerToken
         },
-
+    
         success: function(resp){
             clearAllUserField();
             $('.useremail').val(resp.email),
-                $('.userpassword').val(resp.password),
-                $('.userrole option').each(function() {
-                    if ($(this).text() === resp.role) {
-                        $(this).prop('selected', true);
-                    }
-                })
+            $('.userpassword').val(resp.password),
+            $('.userrole option').each(function() {
+                if ($(this).text() === resp.role) {
+                    $(this).prop('selected', true);
+                }
+            })
         },
         error:function(resp){
             showAlert("error","Oops",resp.message);
@@ -57,7 +58,7 @@ $('.userdataupdate').click(function(){
         headers: {
             'Authorization': 'Bearer ' + bearerToken
         },
-
+    
         success: function(resp){
             showAlert("success","Success","User "+$('.useremail').val()+" Updated Sucessfully.");
             clearAllUserField();
@@ -76,7 +77,7 @@ $('.userdatadelete').click(function(){
         headers: {
             'Authorization': 'Bearer ' + bearerToken
         },
-
+    
         success: function(resp){
             showAlert("success","Success","User "+$('.useremail').val()+" Delete Sucessfully.");
             clearAllUserField();
@@ -95,7 +96,7 @@ $('.useralldataget').click(function(){
         headers: {
             'Authorization': 'Bearer ' + bearerToken
         },
-
+    
         success: function(resp){
             $('.usertable td').parent().remove();
             for(var i in resp){

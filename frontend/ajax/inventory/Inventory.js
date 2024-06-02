@@ -18,7 +18,7 @@ $('.inventorydatasave').click(function(){
         headers: {
             'Authorization': 'Bearer ' + bearerToken
         },
-
+    
         success: function(resp){
             showAlert("success","Success","Inventory "+resp.itemCode+" Saved Sucessfully.");
             clearAllInventoryField();
@@ -36,30 +36,30 @@ $('.inventorydataget').click(function(){
         headers: {
             'Authorization': 'Bearer ' + bearerToken
         },
-
+    
         success: function(resp){
             clearAllInventoryField();
             $('.inventorycode').val(resp.itemCode)
             $('.inventorydescription').val(resp.itemDescription),
                 setReponseInventoryImage(resp.itemPicture),
-                $('.inventorycategory option').each(function() {
-                    if ($(this).text() === resp.category) {
-                        $(this).prop('selected', true);
-                    }
-                }),
-                $('.inventorysize').val(resp.size),
-                $('.inventorysuppliercode').val(resp.supplierCode),
-                $('.inventorysuppliername').val(formatDate(resp.supplierName)),
-                $('.inventorysaleprice').val(formatDate(resp.unitPriceSale)),
-                $('.inventorybuyprice').val(resp.unitPriceBuy),
-                $('.inventoryexpectedprofit').val(resp.expectedProfit),
-                $('.inventoryprofitmargin').val(resp.profitMargin),
-                $('.inventorystatus option').each(function() {
-                    if ($(this).text() === resp.status) {
-                        $(this).prop('selected', true);
-                    }
-                }),
-                $('.inventoryquantity').val(resp.quantity)
+            $('.inventorycategory option').each(function() {
+                if ($(this).text() === resp.category) {
+                    $(this).prop('selected', true);
+                }
+            }),
+            $('.inventorysize').val(resp.size),
+            $('.inventorysuppliercode').val(resp.supplierCode),
+            $('.inventorysuppliername').val(formatDate(resp.supplierName)),
+            $('.inventorysaleprice').val(formatDate(resp.unitPriceSale)),
+            $('.inventorybuyprice').val(resp.unitPriceBuy),
+            $('.inventoryexpectedprofit').val(resp.expectedProfit),
+            $('.inventoryprofitmargin').val(resp.profitMargin),
+            $('.inventorystatus option').each(function() {
+                if ($(this).text() === resp.status) {
+                    $(this).prop('selected', true);
+                }
+            }),
+            $('.inventoryquantity').val(resp.quantity)
         },
         error:function(resp){
             showAlert("error","Oops",resp.message);
@@ -84,7 +84,7 @@ $('.inventorydataupdate').click(function(){
         headers: {
             'Authorization': 'Bearer ' + bearerToken
         },
-
+    
         success: function(resp){
             showAlert("success","Success","Inventory "+$('.inventorycode').val()+" Updated Sucessfully.");
             clearAllInventoryField();
@@ -103,7 +103,7 @@ $('.inventorydatadelete').click(function(){
         headers: {
             'Authorization': 'Bearer ' + bearerToken
         },
-
+    
         success: function(resp){
             showAlert("success","Success","Inventory "+$('.inventorycode').val()+" Delete Sucessfully.");
             clearAllInventoryField();
@@ -122,7 +122,7 @@ $('.inventoryalldataget').click(function(){
         headers: {
             'Authorization': 'Bearer ' + bearerToken
         },
-
+    
         success: function(resp){
             $('.inventorytable td').parent().remove();
             for(var i in resp){

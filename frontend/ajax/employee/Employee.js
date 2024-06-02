@@ -18,7 +18,7 @@ $('.employeedatasave').click(function(){
         headers: {
             'Authorization': 'Bearer ' + bearerToken
         },
-
+    
         success: function(resp){
             showAlert("success","Success","Employee "+resp.employeeCode+" Saved Sucessfully.");
             clearAllEmployeeField();
@@ -36,36 +36,36 @@ $('.employeedataget').click(function(){
         headers: {
             'Authorization': 'Bearer ' + bearerToken
         },
-
+    
         success: function(resp){
             clearAllEmployeeField();
             $('.employeecode').val(resp.employeeCode)
             $('.employeename').val(resp.employeeName),
-                setReponseEmployeeImage(resp.employeeProfilePic)
+            setReponseEmployeeImage(resp.employeeProfilePic)
             $('.employeegender option').each(function() {
                 if ($(this).text() === resp.gender) {
                     $(this).prop('selected', true);
                 }
             }),
-                $('.employeestatus option').each(function() {
-                    if ($(this).text() === resp.status) {
-                        $(this).prop('selected', true);
-                    }
-                }),
-                $('.employeedesignation').val(resp.designation),
-                $('.employeerole').val(resp.accessRole),
-                $('.employeedob').val(formatDate(resp.dob)),
-                $('.employeejoindate').val(formatDate(resp.dateOfJoin)),
-                $('.employeebranch').val(resp.attachedBranch),
-                $('.employeeaddressLine01').val(resp.addressLine01),
-                $('.employeeaddressLine02').val(resp.addressLine02),
-                $('.employeeaddressLine03').val(resp.addressLine03),
-                $('.employeeaddressLine04').val(resp.addressLine04),
-                $('.employeeaddressLine05').val(resp.addressLine05),
-                $('.employeecontactno').val(resp.contactNo),
-                $('.employeeemail').val(resp.email),
-                $('.emergencycontact').val(resp.emergencyContact),
-                $('.employeeinformincaseofEmergency').val(resp.emergencyContactPerson)
+            $('.employeestatus option').each(function() {
+                if ($(this).text() === resp.status) {
+                    $(this).prop('selected', true);
+                }
+            }),
+            $('.employeedesignation').val(resp.designation),
+            $('.employeerole').val(resp.accessRole),
+            $('.employeedob').val(formatDate(resp.dob)),
+            $('.employeejoindate').val(formatDate(resp.dateOfJoin)),
+            $('.employeebranch').val(resp.attachedBranch),
+            $('.employeeaddressLine01').val(resp.addressLine01),
+            $('.employeeaddressLine02').val(resp.addressLine02),
+            $('.employeeaddressLine03').val(resp.addressLine03),
+            $('.employeeaddressLine04').val(resp.addressLine04),
+            $('.employeeaddressLine05').val(resp.addressLine05),
+            $('.employeecontactno').val(resp.contactNo),
+            $('.employeeemail').val(resp.email),
+            $('.emergencycontact').val(resp.emergencyContact),
+            $('.employeeinformincaseofEmergency').val(resp.emergencyContactPerson)
         },
         error:function(resp){
             showAlert("error","Oops",resp.message);
@@ -90,7 +90,7 @@ $('.employeedataupdate').click(function(){
         headers: {
             'Authorization': 'Bearer ' + bearerToken
         },
-
+    
         success: function(resp){
             showAlert("success","Success","Employee "+$('.employeecode').val()+" Updated Sucessfully.");
             clearAllEmployeeField();
@@ -109,7 +109,7 @@ $('.employeedatadelete').click(function(){
         headers: {
             'Authorization': 'Bearer ' + bearerToken
         },
-
+    
         success: function(resp){
             showAlert("success","Success","Employee "+$('.employeecode').val()+" Delete Sucessfully.");
             clearAllEmployeeField();
@@ -128,7 +128,7 @@ $('.employeealldataget').click(function(){
         headers: {
             'Authorization': 'Bearer ' + bearerToken
         },
-
+    
         success: function(resp){
             $('.employeetable td').parent().remove();
             for(var i in resp){

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Employee</title>
+  <title>Hello Shoe</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
@@ -64,13 +64,13 @@
     <div class="brand-logo">
       <a href="../index.html">
         <img src="../asset/images/logo-icon.png" class="logo-icon" alt="logo icon">
-        <h5 class="logo-text">Dashtreme Admin</h5>
+        <h5 class="logo-text">Hello Shoe</h5>
       </a>
     </div>
     <ul class="sidebar-menu do-nicescrol">
       <li class="sidebar-header">MAIN NAVIGATION</li>
       <li>
-        <a href="dashboard.html">
+        <a href="../dashboard.html">
           <i class="zmdi zmdi-view-dashboard"></i> <span>Dashboard</span>
         </a>
       </li>
@@ -145,8 +145,7 @@
             <span class="user-profile"><img src="https://via.placeholder.com/110x110" class="img-circle" alt="user avatar"></span>
           </a>
           <ul class="dropdown-menu dropdown-menu-right">
-
-            <li class="dropdown-item"><i class="icon-power mr-2"></i> Logout</li>
+            <a href="../index.html"> <li class="dropdown-item"><i class="icon-power mr-2"></i> Logout</li></a>
           </ul>
         </li>
       </ul>
@@ -187,10 +186,14 @@
                   <div class="col-md-6">
                     <label  class="form-label">Employee Code</label>
                     <input type="text" class="form-control employeecode"   placeholder="Enter Your Code" required>
+                    <div class="error-message employeecode-error">Invalid code</div>
+
                   </div>
                   <div class="col-md-6">
                     <label  class="form-label">Employee name</label>
                     <input type="text" class="form-control employeename" id="employeename"  placeholder="Enter Your Name" required>
+                    <div class="error-message employeename-error">Invalid name</div>
+
                   </div>
                   <div class="col-md-6">
                     <label for="employeegender" class="form-label">Gender</label>
@@ -212,10 +215,14 @@
                   <div class="col-md-6">
                     <label  class="form-label">Designation</label>
                     <input type="text" class="form-control employeedesignation"  id="employeedesignation" placeholder="Enter Designation" required>
+                    <div class="error-message employeedesignation-error">Invalid designation</div>
+
                   </div>
                   <div class="col-md-6">
                     <label  class="form-label">Access Role</label>
                     <input type="text" class="form-control employeerole" id="employeerole" placeholder="Enter Access Role" required>
+                    <div class="error-message employeerole-error">Invalid role</div>
+
                   </div>
                 </div>
 
@@ -234,27 +241,39 @@
                 <div class="col-md-4 mt-1">
                   <label  class="form-label">Attached Branch</label>
                   <input type="text" class="form-control employeebranch" id="employeebranch" placeholder="Enter Attached Branch" required>
+                  <div class="error-message employeebranch-error">Invalid Attached Branch</div>
+
                 </div>
 
                 <div class="col-md-4 mt-4">
                   <label  class="form-label">Building NO</label>
                   <input type="text" class="form-control employeeaddressLine01" id="employeeaddressLine01"  placeholder="Enter Building NO" required>
+                  <div class="error-message employeeaddressLine01-error">Invalid building number</div>
+
                 </div>
                 <div class="col-md-4 mt-4">
                   <label class="form-label">Lane</label>
                   <input type="text" class="form-control employeeaddressLine02"  id="employeeaddressLine02" placeholder="Enter Lane" required>
+                  <div class="error-message employeeaddressLine02-error">Invalid Lane</div>
+
                 </div>
                 <div class="col-md-4 mt-4">
                   <label  class="form-label">Main City</label>
                   <input type="text" class="form-control employeeaddressLine03" id="employeeaddressLine03"  placeholder="Enter Main City" required>
+                  <div class="error-message employeeaddressLine03-error">Invalid Main City</div>
+
                 </div>
                 <div class="col-md-4">
                   <label  class="form-label">Main State</label>
                   <input type="text" class="form-control employeeaddressLine04" id="employeeaddressLine04"  placeholder="Enter Main State" required>
+                  <div class="error-message employeeaddressLine04-error">Invalid Main State</div>
+
                 </div>
                 <div class="col-md-4">
                   <label class="form-label">Postal Code</label>
                   <input type="text" class="form-control employeeaddressLine05" id="employeeaddressLine05"  placeholder="Enter Postal Code" required>
+                  <div class="error-message employeeaddressLine05-error">Invalid Postal Code</div>
+
                 </div>
 
               </div>
@@ -263,18 +282,26 @@
                 <div class="col-md-4 mt-4">
                   <label  class="form-label">Contact Number</label>
                   <input type="text" class="form-control employeecontactno"  id="employeecontactno" placeholder="Enter Contact Number" required>
+                  <div class="error-message employeecontactno-error">Invalid Contact Number</div>
+
                 </div>
                 <div class="col-md-4 mt-4">
                   <label class="form-label">Email</label>
                   <input type="text" class="form-control employeeemail" id="employeeemail" placeholder="Enter Email" required>
+                  <div class="error-message employeeemail-error">Invalid Email</div>
+
                 </div>
                 <div class="col-md-4 mt-4">
-                  <label  class="form-label">MInform in Case of Emergency</label>
+                  <label  class="form-label">Inform in Case of Emergency</label>
                   <input type="text" class="form-control employeeinformincaseofEmergency"  id="employeeinformincaseofEmergency" placeholder="Enter Emergency" required>
+                  <div class="error-message employeeinformincaseofEmergency-error">Invalid Inform in Case of Emergency</div>
+
                 </div>
                 <div class="col-md-4">
                   <label  class="form-label">Emergency Contact</label>
                   <input type="text" class="form-control emergencycontact"  id="emergencycontact" placeholder="Enter Emergency Contact" required>
+                  <div class="error-message emergencycontact-error">Invalid Emergency Contact</div>
+
                 </div>
               </div>
 
@@ -402,6 +429,7 @@
 <script src="../ajax/employee/Employee.js"></script>
 <script src="../assets/script/employeeform/EmployeeForm.js"></script>
 <script src="../ajax/GlobalAttr.js"></script>
+<script src="../validation/allform/AllValidation.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 

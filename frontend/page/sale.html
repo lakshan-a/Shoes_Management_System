@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Sale</title>
+  <title>Hello Shoe</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
@@ -28,7 +28,7 @@
   <link href="../css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Template Stylesheet -->
-  <!--  <link href="../css/style.css" rel="stylesheet">-->
+    <link href="../css/style.css" rel="stylesheet">
   <!--  <link href="../css/Customer.css" rel="stylesheet">-->
   <!--  <link rel="stylesheet" href="../font/Heebo/stylesheet.css">-->
 
@@ -70,7 +70,7 @@
     <ul class="sidebar-menu do-nicescrol">
       <li class="sidebar-header">MAIN NAVIGATION</li>
       <li>
-        <a href="dashboard.html">
+        <a href="../dashboard.html">
           <i class="zmdi zmdi-view-dashboard"></i> <span>Dashboard</span>
         </a>
       </li>
@@ -146,7 +146,7 @@
           </a>
           <ul class="dropdown-menu dropdown-menu-right">
 
-            <li class="dropdown-item"><i class="icon-power mr-2"></i> Logout</li>
+            <a href="../index.html"> <li class="dropdown-item"><i class="icon-power mr-2"></i> Logout</li></a>
           </ul>
         </li>
       </ul>
@@ -169,14 +169,14 @@
                 <div class="col-md-4">
                   <label for="validationDefault01" class="form-label">Order No</label>
                   <input type="text" class="form-control saleorderno" id="validationDefault01" placeholder="Enter Order No" required>
+                  <div class="error-message saleorderno-error">Invalid order no</div>
+
                 </div>
                 <div class="col-md-4">
                   <label for="validationDefault" class="form-label">Customer Name</label>
-                  <!--<select  class="form-select">
-                      <option selected>Select Customer</option>
-                      <option></option>
-                  </select>-->
                   <input type="text" class="form-control salecustomername" id="validationDefault" placeholder="Enter Order No" required>
+                  <div class="error-message salecustomername-error">Invalid customer name</div>
+
                 </div>
                 <div class="col-md-4">
                   <label  class="form-label">Item DESC</label>
@@ -205,6 +205,8 @@
                 <div class="col-md-4 mt-3">
                   <label for="inputEmail4" class="form-label">Total Price</label>
                   <input type="text" class="form-control saletotalprice" placeholder="Enter Total Price">
+                  <div class="error-message saletotalprice-error">Invalid total price</div>
+
                 </div>
                 <div class="col-md-4 mt-3">
                   <label for="inputEmail4" class="form-label">Purchase date</label>
@@ -221,10 +223,14 @@
                 <div class="col-md-4 mt-3">
                   <label for="inputPassword4" class="form-label">Add points</label>
                   <input type="number" class="form-control salepoints" id="inputPassword4" placeholder="Enter Points">
+                  <div class="error-message salepoints-error">Invalid add points</div>
+
                 </div>
                 <div class="col-md-4 mt-3">
                   <label for="inputCity" class="form-label">Cashier Name</label>
                   <input type="text" class="form-control salecashiername" id="inputCity" placeholder="Enter Cashier Name">
+                  <div class="error-message salecashiername-error">Invalid cashier name</div>
+
                 </div>
                 <div class="col-md-4 mt-3">
                   <label for="inputPassword4" class="form-label">Item Code</label>
@@ -419,6 +425,7 @@
 <script src="../assets/script/saleform/SaleForm.js"></script>
 <script src="../assets/script/jquery-3.7.1.min.js"></script>
 <script src="../ajax/GlobalAttr.js"></script>
+<script src="../validation/allform/AllValidation.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 

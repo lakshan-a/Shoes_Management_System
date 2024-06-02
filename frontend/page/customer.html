@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Customer</title>
+  <title>Hello Shoe</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
@@ -28,7 +28,7 @@
   <link href="../css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Template Stylesheet -->
-<!--  <link href="../css/style.css" rel="stylesheet">-->
+  <link href="../css/style.css" rel="stylesheet">
 <!--  <link href="../css/Customer.css" rel="stylesheet">-->
 <!--  <link rel="stylesheet" href="../font/Heebo/stylesheet.css">-->
 
@@ -52,7 +52,6 @@
   <link href="../asset/css/app-style.css" rel="stylesheet"/>
 
 
-
 </head>
 <body class="bg-theme bg-theme1">
 
@@ -70,7 +69,7 @@
     <ul class="sidebar-menu do-nicescrol">
       <li class="sidebar-header">MAIN NAVIGATION</li>
       <li>
-        <a href="dashboard.html">
+        <a href="../dashboard.html">
           <i class="zmdi zmdi-view-dashboard"></i> <span>Dashboard</span>
         </a>
       </li>
@@ -167,11 +166,15 @@
               <div class="row">
                 <div class="col-md-4">
                   <label for="validationDefault01" class="form-label">Customer Code :</label>
-                  <input type="text" class="form-control customercode" id="validationDefault01" placeholder="Enter Customer Code" required>
+                  <input type="text" class="form-control customercode " id="validationDefault01" placeholder="Enter Customer Code" required>
+                  <div class="error-message customercode-error">Invalid Customer code</div>
+
                 </div>
                 <div class="col-md-4">
                   <label for="validationDefault02" class="form-label">Customer Name :</label>
                   <input type="text" class="form-control customername" id="validationDefault02" placeholder="Enter Customer Name" required>
+                  <div class="error-message customername-error">Invalid Customer Name</div>
+
                 </div>
                 <div class="col-md-4" >
                   <label for="inputGender" class="form-label"><b>Gender</b></label>
@@ -213,11 +216,15 @@
                 <div class="col-md-4 mt-3">
                   <label for="customercontactno" class="form-label">Contact No :</label>
                   <input type="text" class="form-control customercontactno" id="customercontactno" placeholder="Enter Contact No" required>
+                  <div class="error-message customercontactno-error">Invalid contact no</div>
+
                 </div>
 
                 <div class="col-md-4 mt-3">
                   <label for="customeremail" class="form-label">Email :</label>
                   <input type="text" class="form-control customeremail" id="customeremail" placeholder="Enter Email" required>
+                  <div class="error-message customeremail-error">Invalid email</div>
+
                 </div>
 
               </div>
@@ -225,24 +232,31 @@
               <div class="row">
 
                 <div class="col-md-4 mt-5">
-                  <label for="customeraddressline01" class="form-label">Address Line 01 :</label>
+                  <label for="customeraddressline01" class="form-label">Building No :</label>
                   <input type="text" class="form-control customeraddressline01" id="customeraddressline01" placeholder="Address Line 01" required>
+                  <div class="error-message customeraddressline01-error">Invalid building no</div>
+
                 </div>
                 <div class="col-md-4 mt-5">
-                  <label for="customeraddressline02" class="form-label">Address Line 02 :</label>
+                  <label for="customeraddressline02" class="form-label">Lane :</label>
                   <input type="text" class="form-control customeraddressline02" id="customeraddressline02" placeholder="Address Line 02" required>
+                  <div class="error-message customeraddressline02-error">Invalid lane</div>
                 </div>
                 <div class="col-md-4 mt-5">
-                  <label for="customeraddressline03" class="form-label">Address Line 03 :</label>
+                  <label for="customeraddressline03" class="form-label">Main city :</label>
                   <input type="text" class="form-control customeraddressline03" id="customeraddressline03" placeholder="Address Line 03" required>
+                  <div class="error-message customeraddressline03-error">Invalid Main city</div>
                 </div>
                 <div class="col-md-4 mt-3">
-                  <label for="customeraddressline04" class="form-label">Address Line 04 :</label>
+                  <label for="customeraddressline04" class="form-label">Main State :</label>
                   <input type="text" class="form-control customeraddressline04" id="customeraddressline04" placeholder="Address Line 04" required>
+                  <div class="error-message customeraddressline04-error">Invalid Main State</div>
+
                 </div>
                 <div class="col-md-4 mt-3">
-                  <label for="customeraddressline05" class="form-label">Address Line 05 :</label>
+                  <label for="customeraddressline05" class="form-label">Postal code :</label>
                   <input type="text" class="form-control customeraddressline05" id="customeraddressline05" placeholder="Address Line 05" required>
+                  <div class="error-message customeraddressline05-error">Invalid Postal code</div>
                 </div>
               </div>
 
@@ -346,6 +360,7 @@
 <script src="../assets/script/customerform/CustomerForm.js"></script>
 <script src="../assets/script/jquery-3.7.1.min.js"></script>
 <script src="../ajax/GlobalAttr.js"></script>
+<script src="../validation/allform/AllValidation.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 

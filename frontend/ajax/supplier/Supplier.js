@@ -10,7 +10,7 @@ $('.supplierdatasave').click(function(){
         headers: {
             'Authorization': 'Bearer ' + bearerToken
         },
-
+    
         success: function(resp){
             showAlert("success","Success","Supplier "+resp.supplierCode+" Saved Sucessfully.");
             clearAllSupplierField();
@@ -28,25 +28,25 @@ $('.supplierdataget').click(function(){
         headers: {
             'Authorization': 'Bearer ' + bearerToken
         },
-
+    
         success: function(resp){
             clearAllSupplierField();
             $('.suppliercode').val(resp.supplierCode),
-                $('.suppliername').val(resp.supplierName),
-                $('.suppliercategory option').each(function() {
-                    if ($(this).text() === resp.category) {
-                        $(this).prop('selected', true);
-                    }
-                }),
-                $('.supplieraddress01').val(resp.addressLine01),
-                $('.supplieraddress02').val(resp.addressLine02),
-                $('.supplieraddress03').val(resp.addressLine03),
-                $('.supplieraddress04').val(resp.addressLine04),
-                $('.supplieraddress05').val(resp.addressLine05),
-                $('.supplieraddress06').val(resp.addressLine06),
-                $('.suppliercontactnumber').val(resp.contactNo1),
-                $('.supplierlandlinenumber').val(resp.landLineNo),
-                $('.supplieremail').val(resp.email)
+            $('.suppliername').val(resp.supplierName),
+            $('.suppliercategory option').each(function() {
+                if ($(this).text() === resp.category) {
+                    $(this).prop('selected', true);
+                }
+            }),
+            $('.supplieraddress01').val(resp.addressLine01),
+            $('.supplieraddress02').val(resp.addressLine02),
+            $('.supplieraddress03').val(resp.addressLine03),
+            $('.supplieraddress04').val(resp.addressLine04),
+            $('.supplieraddress05').val(resp.addressLine05),
+            $('.supplieraddress06').val(resp.addressLine06),
+            $('.suppliercontactnumber').val(resp.contactNo1),
+            $('.supplierlandlinenumber').val(resp.landLineNo),
+            $('.supplieremail').val(resp.email)
         },
         error:function(resp){
             showAlert("error","Oops",resp.message);
@@ -65,7 +65,7 @@ $('.supplierdataupdate').click(function(){
         headers: {
             'Authorization': 'Bearer ' + bearerToken
         },
-
+    
         success: function(resp){
             showAlert("success","Success","Supplier "+$('.suppliercode').val()+" Updated Sucessfully.");
             clearAllSupplierField();
@@ -84,13 +84,13 @@ $('.supplierdatadelete').click(function(){
         headers: {
             'Authorization': 'Bearer ' + bearerToken
         },
-
+    
         success: function(resp){
             showAlert("success","Success","Supplier "+$('.suppliercode').val()+" Delete Sucessfully.");
             clearAllSupplierField();
         },
         error:function(resp){
-            showAlert("error","Oops","This Customer "+$('.suppliercode').val()+" Not Found.");
+            showAlert("error","Oops","This Supplier "+$('.suppliercode').val()+" Not Found.");
         }
     });
 });
@@ -103,7 +103,7 @@ $('.supplieralldataget').click(function(){
         headers: {
             'Authorization': 'Bearer ' + bearerToken
         },
-
+    
         success: function(resp){
             $('.suppliertable td').parent().remove();
             for (var i in resp) {
@@ -119,7 +119,7 @@ $('.supplieralldataget').click(function(){
                 let contactNo1 = resp[i].contactNo1;
                 let landLineNo = resp[i].landLineNo;
                 let email = resp[i].email;
-
+            
                 let supplier = Object.assign({}, Supplier);
                 supplier.supplierCode = supplierCode;
                 supplier.supplierName = supplierName;
@@ -133,10 +133,10 @@ $('.supplieralldataget').click(function(){
                 supplier.contactNo1 = contactNo1;
                 supplier.landLineNo = landLineNo;
                 supplier.email = email;
-
+            
                 AllSupplier.push(supplier);
                 dataToSupplierTable(supplier);
-            }
+            }            
         },
         error:function(resp){
             showAlert("error","Oops",resp.mesasge);

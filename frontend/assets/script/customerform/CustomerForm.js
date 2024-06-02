@@ -67,13 +67,15 @@ function dataToCustomerTable(customer){
                 <td>${customer.totalPoints}</td>
                 <td>${customer.dob}</td>
                 <td>${customer.addressLine01}</td>
-                <td>${customer.addressLine02}</td>
-                <td>${customer.addressLine03}</td>
-                <td>${customer.addressLine04}</td>
-                <td>${customer.addressLine05}</td>
+                <td>${customer.contactNo}</td>
                 <td>${customer.email}</td>
                 <td>${customer.recentPurchaseDateTime}</td>
+               
               </tr>`;
 
     $(".customertable").append(row);
+    /*let Today = isDateToday(customer.dob);
+    if(Today){
+        sendEmail(customer.email,customer.customerName);
+    }*/
 }

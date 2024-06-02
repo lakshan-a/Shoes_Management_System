@@ -11,7 +11,7 @@ $('.saledatasave').click(function(){
         headers: {
             'Authorization': 'Bearer ' + bearerToken
         },
-
+    
         success: function(resp){
             showAlert("success","Success","Sale Saved Sucessfully.");
             clearAllSaleField();
@@ -31,7 +31,7 @@ $('.saledataget').click(function(){
         headers: {
             'Authorization': 'Bearer ' + bearerToken
         },
-
+    
         success: function(resp){
             tableData.length=0;
             clearAllSalesField();
@@ -44,12 +44,12 @@ $('.saledataget').click(function(){
                         $(this).prop('selected', true);
                     }
                 }),
-                    $('.saleorderno').val(resp.orderNo),
-                    $('.saletotalprice').val(resp.totalPrice),
-                    $('.salepoints').val(resp.addedPoints),
-                    $('.salecustomername').val(resp.customerName),
-                    $('.salepurchasedate').val(formatDate(resp.purchaseDate)),
-                    $('.salecashiername').val(resp.cashierName);
+                $('.saleorderno').val(resp.orderNo),
+                $('.saletotalprice').val(resp.totalPrice),
+                $('.salepoints').val(resp.addedPoints),
+                $('.salecustomername').val(resp.customerName),
+                $('.salepurchasedate').val(formatDate(resp.purchaseDate)),
+                $('.salecashiername').val(resp.cashierName);
 
                 let itemData = {
                     id:resp.inventory[i].id,
@@ -117,7 +117,7 @@ $('.saledataupdate').click(function(){
         headers: {
             'Authorization': 'Bearer ' + bearerToken
         },
-
+    
         success: function(resp){
             showAlert("success","Success","Sale Updated Sucessfully.");
             clearAllSalesField();
@@ -141,7 +141,7 @@ $('.salealldataget').click(function(){
         headers: {
             'Authorization': 'Bearer ' + bearerToken
         },
-
+    
         success: function(resp){
             console.log(resp);
             $('.saletable td').parent().remove();
@@ -196,7 +196,7 @@ $('.saledatadelete').click(function(){
         headers: {
             'Authorization': 'Bearer ' + bearerToken
         },
-
+    
         success: function(resp){
             showAlert("success","Success","Sales "+$('.saleorderno').val()+" Delete Sucessfully.");
             clearAllSupplierField();
@@ -217,7 +217,7 @@ function getAllSaleDataFromField(){
         purchaseDate: $('.salepurchasedate').val(),
         paymentMethod: $('.salepayementmethod').find('option:selected').text(),
         addedPoints: $('.salepoints').val(),
-        cashierName: $('.salecashiername').val()
+        cashierName: $('.salecashiername').val()        
     }
 }
 
@@ -230,6 +230,6 @@ function getAllUpdateSaleDataFromField(){
         purchaseDate: $('.salepurchasedate').val(),
         paymentMethod: $('.salepayementmethod').find('option:selected').text(),
         addedPoints: $('.salepoints').val(),
-        cashierName: $('.salecashiername').val()
+        cashierName: $('.salecashiername').val()        
     }
 }

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Suppliers</title>
+  <title>Hello Shoe</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
@@ -28,7 +28,7 @@
   <link href="../css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Template Stylesheet -->
-  <!--  <link href="../css/style.css" rel="stylesheet">-->
+    <link href="../css/style.css" rel="stylesheet">
   <!--  <link href="../css/Customer.css" rel="stylesheet">-->
   <!--  <link rel="stylesheet" href="../font/Heebo/stylesheet.css">-->
 
@@ -70,7 +70,7 @@
     <ul class="sidebar-menu do-nicescrol">
       <li class="sidebar-header">MAIN NAVIGATION</li>
       <li>
-        <a href="dashboard.html">
+        <a href="../dashboard.html">
           <i class="zmdi zmdi-view-dashboard"></i> <span>Dashboard</span>
         </a>
       </li>
@@ -146,7 +146,7 @@
           </a>
           <ul class="dropdown-menu dropdown-menu-right">
 
-            <li class="dropdown-item"><i class="icon-power mr-2"></i> Logout</li>
+            <a href="../index.html"> <li class="dropdown-item"><i class="icon-power mr-2"></i> Logout</li></a>
           </ul>
         </li>
       </ul>
@@ -169,10 +169,14 @@
                 <div class="col-md-4">
                   <label for="validationDefault01" class="form-label">Supplier Code</label>
                   <input type="text" class="form-control suppliercode" id="validationDefault01" placeholder="Enter Supplier Code" required>
+                  <div class="error-message suppliercode-error">Invalid supplier code</div>
+
                 </div>
                 <div class="col-md-4">
                   <label for="validationDefault02" class="form-label">Supplier Name</label>
                   <input type="text" class="form-control suppliername" id="validationDefault02" placeholder="Enter Supplier Node" required>
+                  <div class="error-message suppliername-error">Invalid supplier name</div>
+
                 </div>
                 <div class="col-md-4">
                   <label for="inputPassword4" class="form-label labelfont">Category</label>
@@ -186,39 +190,57 @@
                 <div class="col-md-4 mt-5">
                   <label for="validationDefault01" class="form-label">Building NO</label>
                   <input type="text" class="form-control supplieraddress01"  placeholder="Enter Building NO" required>
+                  <div class="error-message supplieraddress01-error">Invalid building no</div>
+
                 </div>
                 <div class="col-md-4 mt-5">
                   <label for="validationDefault02" class="form-label">Lane</label>
                   <input type="text" class="form-control supplieraddress02"  placeholder="Enter Lane" required>
+                  <div class="error-message supplieraddress02-error">Invalid lane</div>
+
                 </div>
                 <div class="col-md-4 mt-5">
                   <label for="validationDefault01" class="form-label">Main City</label>
                   <input type="text" class="form-control supplieraddress03"  placeholder="Enter Main City" required>
+                  <div class="error-message supplieraddress03-error">Invalid main city</div>
+
                 </div>
                 <div class="col-md-4 mt-3">
                   <label for="validationDefault02" class="form-label">Main State</label>
                   <input type="text" class="form-control supplieraddress04"  placeholder="Enter Main State" required>
+                  <div class="error-message supplieraddress04-error">Invalid main state</div>
+
                 </div>
                 <div class="col-md-4 mt-3">
                   <label for="validationDefault01" class="form-label">Postal Code</label>
                   <input type="text" class="form-control supplieraddress05"  placeholder="Enter Postal Code" required>
+                  <div class="error-message supplieraddress05-error">Invalid postal code</div>
+
                 </div>
                 <div class="col-md-4 mt-3">
                   <label for="validationDefault01" class="form-label">Country</label>
                   <input type="text" class="form-control supplieraddress06"  placeholder="Enter Country" required>
+                  <div class="error-message supplieraddress06-error">Invalid country</div>
+
                 </div>
 
                 <div class="col-md-4 mt-5">
                   <label for="validationDefault01" class="form-label">Mobile Number</label>
                   <input type="text" class="form-control suppliercontactnumber"  placeholder="Enter Mobile Number" required>
+                  <div class="error-message suppliercontactnumber-error">Invalid mobile number</div>
+
                 </div>
                 <div class="col-md-4 mt-5">
                   <label for="validationDefault02" class="form-label">Landline Number</label>
                   <input type="text" class="form-control supplierlandlinenumber"  placeholder="Enter Landline Number" required>
+                  <div class="error-message supplierlandlinenumber-error">Invalid landline number</div>
+
                 </div>
                 <div class="col-md-4 mt-5">
                   <label for="validationDefault01" class="form-label">Email</label>
                   <input type="text" class="form-control supplieremail"  placeholder="Enter Email" required>
+                  <div class="error-message supplieremail-error">Invalid email</div>
+
                 </div>
 
               </div>
@@ -340,6 +362,7 @@
 <script src="../assets/script/supplierForm/SupplierForm.js"></script>
 <script src="../assets/script/jquery-3.7.1.min.js"></script>
 <script src="../ajax/GlobalAttr.js"></script>
+<script src="../validation/allform/AllValidation.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 

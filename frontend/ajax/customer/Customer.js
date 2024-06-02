@@ -1,8 +1,27 @@
 let customerURI = 'http://localhost:8080/app/api/v0/customers'
 
+/*getNextCustomerCode();
+
+function getNextCustomerCode(){
+    $.ajax({
+        url:customerURI+'/nextid',
+        method:'GET',
+        contentType: 'application/json',
+        headers: {
+            'Authorization': 'Bearer ' + bearerToken
+        },
+
+        success: function(resp){
+            console.log(resp);
+            $('.customercode').val(resp)
+        }
+    });
+}*/
+
 $('.customerdatasave').click(function(){
     console.log(getAllCustomerDataFromField);
     const customerData = getAllCustomerDataFromField();
+    console.log(customerData)
     $.ajax({
         url:customerURI,
         method:'POST',
@@ -11,7 +30,7 @@ $('.customerdatasave').click(function(){
         headers: {
             'Authorization': 'Bearer ' + bearerToken
         },
-
+    
         success: function(resp){
             showAlert("success","Success","Customer "+resp.customerCode+" Saved Sucessfully.");
             clearAllCustomerField();
@@ -29,32 +48,32 @@ $('.customerdataget').click(function(){
         headers: {
             'Authorization': 'Bearer ' + bearerToken
         },
-
+    
         success: function(resp){
             clearAllCustomerField();
             $('.customercode').val(resp.customerCode)
             $('.customername').val(resp.customerName),
-                $('.customergender option').each(function() {
-                    if ($(this).text() === resp.gender) {
-                        $(this).prop('selected', true);
-                    }
-                }),
-                $('.joindate').val(formatDate(resp.joinDate)),
-                $('.customerlevel option').each(function() {
-                    if ($(this).text() === resp.level) {
-                        $(this).prop('selected', true);
-                    }
-                }),
-                $('.customertotalpoints').val(resp.totalPoints),
-                $('.customerdob').val(formatDate(resp.dob)),
-                $('.customeraddressline01').val(resp.addressLine01),
-                $('.customeraddressline02').val(resp.addressLine02),
-                $('.customeraddressline03').val(resp.addressLine03),
-                $('.customeraddressline04').val(resp.addressLine04),
-                $('.customeraddressline05').val(resp.addressLine05),
-                $('.customercontactno').val(resp.contactNo),
-                $('.customeremail').val(resp.email),
-                $('.customerrecentpurchasedatetime').val(formatDate(resp.recentPurchaseDateTime))
+            $('.customergender option').each(function() {
+                if ($(this).text() === resp.gender) {
+                    $(this).prop('selected', true);
+                }
+            }),
+            $('.joindate').val(formatDate(resp.joinDate)),
+            $('.customerlevel option').each(function() {
+                if ($(this).text() === resp.level) {
+                    $(this).prop('selected', true);
+                }
+            }),
+            $('.customertotalpoints').val(resp.totalPoints),
+            $('.customerdob').val(formatDate(resp.dob)),
+            $('.customeraddressline01').val(resp.addressLine01),
+            $('.customeraddressline02').val(resp.addressLine02),
+            $('.customeraddressline03').val(resp.addressLine03),
+            $('.customeraddressline04').val(resp.addressLine04),
+            $('.customeraddressline05').val(resp.addressLine05),
+            $('.customercontactno').val(resp.contactNo),
+            $('.customeremail').val(resp.email),
+            $('.customerrecentpurchasedatetime').val(formatDate(resp.recentPurchaseDateTime))
         },
         error:function(resp){
             showAlert("error","Oops",resp.message);
@@ -74,7 +93,7 @@ $('.customerdataupdate').click(function(){
         headers: {
             'Authorization': 'Bearer ' + bearerToken
         },
-
+    
         success: function(resp){
             showAlert("success","Success","Customer "+$('.customercode').val()+" Updated Sucessfully.");
             clearAllCustomerField();
@@ -93,7 +112,7 @@ $('.customerdatadelete').click(function(){
         headers: {
             'Authorization': 'Bearer ' + bearerToken
         },
-
+    
         success: function(resp){
             showAlert("success","Success","Customer "+$('.customercode').val()+" Delete Sucessfully.");
             clearAllCustomerField();
@@ -112,7 +131,7 @@ $('.customeralldataget').click(function(){
         headers: {
             'Authorization': 'Bearer ' + bearerToken
         },
-
+    
         success: function(resp){
             $('.customertable td').parent().remove();
             for(var i in resp){

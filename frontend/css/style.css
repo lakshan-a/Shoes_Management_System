@@ -279,3 +279,16 @@
 .most-sale-item-pic{
     display: flex;
 }
+
+.error-message {
+    margin-bottom: 1vh;
+    margin-left: 13vw;
+    color: red;
+    display: none;
+    font-family: "Dongle", sans-serif;
+    font-size: 0.8em;
+    height: 0px;
+}
+.error-border {
+    border-color: red;
+}
